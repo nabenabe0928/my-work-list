@@ -1,0 +1,340 @@
+[
+    {
+        "title": "example",
+        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "AAAI Conference on Artificial Intelligence (AAAI2021)",
+        "venueType": "Conference or Workshop or Journal or Preprint or Thesis",
+        "isOralPresentation": false,
+        "submissionCount": 10000,
+        "acceptanceCount": 1000,
+        "awardInfo": "Award information",
+        "publishedMonth": 1,
+        "publishedYear": 2024,
+        "urls": {
+            "paper": "Paper URL at the venue website",
+            "arxiv": "arXiv URL",
+            "pdf": "PDF URL if we do not have arXiv",
+            "code": "GitHub repo URL",
+            "slide": "Slide URL",
+            "poster": "Poster URL",
+            "video": "Video URL",
+            "shortVideo": "Short video URL",
+            "videoTranscript": "Transcript for video",
+            "shortVideoTranscript": "Transcript for short video"
+        }
+    },
+    {
+        "title": "c-TPE: Tree-Structured Parzen Estimator with Inequality Constraints for Expensive Hyperparameter Optimization",
+        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "submissionCount": 4566,
+        "acceptanceCount": 644,
+        "publishedMonth": 8,
+        "publishedYear": 2023,
+        "urls": {
+            "paper": "https://www.ijcai.org/proceedings/2023/486",
+            "arxiv": "https://arxiv.org/abs/2211.14411",
+            "code": "https://github.com/nabenabe0928/constrained-tpe",
+            "slide": "https://drive.google.com/file/d/1Y9UZYhVmX65tqr6DGYOpzKmQL2x-wRPW/view",
+            "poster": "https://drive.google.com/file/d/15eY1VjuzXwrNU3HTT1xVmzG8l3XYaqyR/view",
+            "videoTranscript": "https://drive.google.com/file/d/11RLMClHdwGGudUI7vMxWuT7lKXcsWmBT/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "Speeding Up Multi-Objective Hyperparameter Optimization by Task Similarity-Based Meta-Learning for the Tree-Structured Parzen Estimator",
+        "authorNames": ["Shuhei Watanabe", "Noor Awad", "Masaki Onishi", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "submissionCount": 4566,
+        "acceptanceCount": 644,
+        "publishedMonth": 8,
+        "publishedYear": 2023,
+        "urls": {
+            "paper": "https://www.ijcai.org/proceedings/2023/487",
+            "arxiv": "https://arxiv.org/abs/2212.06751",
+            "code": "https://github.com/nabenabe0928/meta-learn-tpe",
+            "slide": "https://drive.google.com/file/d/1hIhKlrxF-Deq_DgMiOjBMambK7sDZpIP/view",
+            "poster": "https://drive.google.com/file/d/1l2Na0UaT7SKZkmSVi6ljGcY1AuH-8sZK/view",
+            "videoTranscript": "https://drive.google.com/file/d/13llHRVX2hoxo1vbeHdz69U-kZKRgVNpc/view"
+        }
+    },
+    {
+        "title": "PED-ANOVA: Efficiently Quantifying Hyperparameter Importance in Arbitrary Subspaces",
+        "authorNames": ["Shuhei Watanabe", "Archit Bansal", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "submissionCount": 4566,
+        "acceptanceCount": 644,
+        "publishedMonth": 8,
+        "publishedYear": 2023,
+        "urls": {
+            "paper": "https://www.ijcai.org/proceedings/2023/488",
+            "arxiv": "https://arxiv.org/abs/2304.10255",
+            "code": "https://github.com/nabenabe0928/local-anova",
+            "slide": "https://drive.google.com/file/d/1pwCa0fgh6jIooW0admOmkApa8VQqAgTF/view",
+            "poster": "https://drive.google.com/file/d/18MvL9BtqFcnS6CkcOOHg_GglsTLoxdX8/view",
+            "videoTranscript": "https://drive.google.com/file/d/1RjVwHHARUhE5IipMtkQgKCKcfQJG35Q2/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "Warm Starting CMA-ES for Hyperparameter Optimization",
+        "authorNames": ["Masahiro Nomura", "Shuhei Watanabe", "Youhei Akimoto", "Yoshihiko Ozaki", "Masaki Onishi"],
+        "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
+        "venueName": "AAAI Conference on Artificial Intelligence (AAAI2021)",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "submissionCount": 9034,
+        "acceptanceCount": 1692,
+        "publishedMonth": 1,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/17109/16916",
+            "arxiv": "https://arxiv.org/abs/2012.06932",
+            "pdf": "",
+            "code": "",
+            "slide": "",
+            "poster": "",
+            "video": "",
+            "shortVideo": "",
+            "videoTranscript": "",
+            "shortVideoTranscript": ""
+        }
+    },
+    {
+        "title": "Evaluating Initialization of Nelder-Mead Method for Hyperparameter Optimization in Deep Learning",
+        "authorNames": ["Shintaro Takenaga", "Shuhei Watanabe", "Masahiro Nomura", "Yoshihiko Ozaki", "Masaki Onishi"],
+        "firstAuthors": ["Shintaro Takenaga"],
+        "venueName": "International Conference on Pattern Recognition (ICPR2020)",
+        "venueType": "Conference",
+        "isOralPresentation": true,
+        "publishedMonth": 11,
+        "publishedYear": 2020,
+        "urls": {
+            "paper": "https://ieeexplore.ieee.org/document/9412240"
+        }
+    },
+    {
+        "title": "Multiobjective Tree-Structured Parzen Estimator for Computationally Expensive Optimization Problems",
+        "authorNames": ["Yoshihiko Ozaki", "Yuki Tanigaki", "Shuhei Watanabe", "Masaki Onishi"],
+        "firstAuthors": ["Yoshihiko Ozaki"],
+        "venueName": "The Genetic and Evolutionary Computation Conference (GECCO2020)",
+        "venueType": "Conference",
+        "isOralPresentation": true,
+        "submissionCount": 415,
+        "acceptanceCount": 149,
+        "publishedMonth": 7,
+        "publishedYear": 2020,
+        "urls": {
+            "paper": "https://dl.acm.org/doi/10.1145/3377930.3389817",
+            "pdf": "https://dl.acm.org/doi/pdf/10.1145/3377930.3389817",
+            "code": "https://github.com/y0z/motpe"
+        }
+    },
+    {
+        "title": "Speeding up of the Nelder-Mead Method by Data-driven Speculative Execution",
+        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki", "Yoshiaki Bando", "Masaki Onishi"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Asian Conference on Pattern Recognition (ACPR2019)",
+        "venueType": "Conference",
+        "isOralPresentation": true,
+        "submissionCount": 273,
+        "acceptanceCount": 128,
+        "publishedMonth": 9,
+        "publishedYear": 2019,
+        "urls": {
+            "paper": "https://dl.acm.org/doi/abs/10.1007/978-3-030-41404-7_31",
+            "slide": "https://drive.google.com/file/d/1qzvMLcB9Qak6pvoJR1mL7tGfz8mkg8ay/view?usp=drive_link",
+            "poster": "https://drive.google.com/file/d/1T7ud7WKJn_YOnof0aVV97NLUZIaMKC2D/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "Python Wrapper for Simulating Multi-Fidelity Optimization on HPO Benchmarks without Any Wait",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "AutoML Conference 2023 Workshop Track",
+        "venueType": "Workshop",
+        "isOralPresentation": false,
+        "publishedMonth": 9,
+        "publishedYear": 2023,
+        "urls": {
+            "paper": "https://2023.automl.cc/program/accepted_papers/",
+            "arxiv": "https://arxiv.org/abs/2305.17595",
+            "code": "https://github.com/nabenabe0928/mfhpo-simulator/",
+            "slide": "https://drive.google.com/file/d/1ZJlscGuyW9fZ1XWo6DmRSaYbuLnXc8jT/view",
+            "video": "https://www.youtube.com/watch?v=YIwyMLTd71U&list=PLp7L30nGpKM97F_WUFJdJhBgtPAMNAX5H&index=9",
+            "shortVideo": "https://www.youtube.com/watch?v=7s2p05FAxck&list=PLp7L30nGpKM9-z5vH-nQ6Wh4thUtPoH9p&index=9",
+            "videoTranscript": "https://drive.google.com/file/d/1WeD6nO7Wgm8j5YItjoLwL0KvZ7tNS0u5/view?usp=drive_link",
+            "shortVideoTranscript": "https://drive.google.com/file/d/1Ns6n4Rfxh4hez-GOvwZtcrmB0ALKwLAS/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "c-TPE: Generalizing Tree-Structured Parzen Estimator with Inequality Constraints for Continuous and Categorical Hyperparameter Optimization",
+        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Workshop on Gaussian Processes, Spatiotemporal Modeling, and Decision-making Systems at NeurIPS 2022 (GPSMDM2022)",
+        "venueType": "Workshop",
+        "isOralPresentation": false,
+        "publishedMonth": 12,
+        "publishedYear": 2022,
+        "urls": {
+            "paper": "https://gp-seminar-series.github.io/neurips-2022/",
+            "arxiv": "https://arxiv.org/abs/2211.14411",
+            "pdf": "https://gp-seminar-series.github.io/neurips-2022/assets/camera_ready/5.pdf",
+            "code": "https://github.com/nabenabe0928/constrained-tpe",
+            "poster": "https://gp-seminar-series.github.io/neurips-2022/assets/camera_ready/5_poster.pdf"
+        }
+    },
+    {
+        "title": "Multi-Objective Tree-Structured Parzen Estimator Meets Meta-learning",
+        "authorNames": ["Shuhei Watanabe", "Noor Awad", "Masaki Onishi", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Workshop on Meta-Learning at NeurIPS 2022 (MetaLearn2022)",
+        "venueType": "Workshop",
+        "isOralPresentation": false,
+        "publishedMonth": 12,
+        "publishedYear": 2022,
+        "urls": {
+            "paper": "https://openreview.net/forum?id=vBcKu0UL3A9",
+            "arxiv": "https://arxiv.org/abs/2212.06751",
+            "pdf": "https://openreview.net/pdf?id=vBcKu0UL3A9",
+            "code": "https://github.com/nabenabe0928/meta-learn-tpe",
+            "poster": "https://drive.google.com/file/d/11j_zEiOs9iL08pvYUsgPbEjFnM-fCN6H/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "Warm Starting Method for CMA-ES",
+        "authorNames": ["Masahiro Nomura", "Shuhei Watanabe", "Yoshihiko Ozaki", "Masaki Onishi"],
+        "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
+        "venueName": "Workshop on Meta-Learning at NeurIPS 2019 (MetaLearn2019)",
+        "venueType": "Workshop",
+        "isOralPresentation": false,
+        "publishedMonth": 12,
+        "publishedYear": 2019,
+        "urls": {
+            "paper": "https://meta-learn.github.io/2019/",
+            "arxiv": "https://arxiv.org/abs/2012.06932",
+            "pdf": "https://github.com/meta-learn/meta-learn.github.io/blob/master/2019/papers/metalearn2019-nomura.pdf"
+        }
+    },
+    {
+        "title": "Accelerating the Nelder-Mead Method with Predictive Evaluation",
+        "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Masaki Onishi"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Workshop on Automated Machine Learning at ICML 2019 (AutoML2019)",
+        "venueType": "Workshop",
+        "isOralPresentation": false,
+        "publishedMonth": 7,
+        "publishedYear": 2019,
+        "urls": {
+            "paper": "https://sites.google.com/view/automl2019icml/",
+            "pdf": "https://www.automl.org/wp-content/uploads/2019/06/automlws2019_Paper12.pdf",
+            "code": "https://github.com/y0z/NMwithPredictiveParallelEvaluation"
+        }
+    },
+    {
+        "title": "Multiobjective Tree-Structured Parzen Estimator",
+        "authorNames": ["Yoshihiko Ozaki", "Yuki Tanigaki", "Shuhei Watanabe", "Masahiro Nomura", "Masaki Onishi"],
+        "firstAuthors": ["Yoshihiko Ozaki"],
+        "venueName": "Journal of Artificial Intelligence Research (JAIR2022)",
+        "venueType": "Journal",
+        "isOralPresentation": false,
+        "publishedMonth": 3,
+        "publishedYear": 2022,
+        "urls": {
+            "paper": "https://www.jair.org/index.php/jair/article/view/13188",
+            "pdf": "https://www.jair.org/index.php/jair/article/view/13188/26784",
+            "code": "https://github.com/y0z/MOTPE_JAIR/tree/master/optuna"
+        }
+    },
+    {
+        "title": "Tree-Structured Parzen Estimator: Understanding Its Algorithm Components and Their Roles for Better Empirical Performance",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv:2304.11127 (2023)",
+        "venueType": "Preprint",
+        "isOralPresentation": false,
+        "publishedMonth": 3,
+        "publishedYear": 2023,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2304.11127",
+            "code": "https://github.com/nabenabe0928/tpe/tree/single-opt"
+        }
+    },
+    {
+        "title": "The Characteristics Required in Hyperparameter Optimization of Deep Learning Algorithms",
+        "authorNames": ["Shuhei Watanabe", "Masahiro Nomura", "Masaki Onishi"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Japanese Society for Artificial Intelligence (JSAI2020)",
+        "venueType": "Preprint",
+        "isOralPresentation": false,
+        "publishedMonth": 3,
+        "publishedYear": 2020,
+        "urls": {
+            "paper": "https://confit.atlas.jp/guide/event/jsai2020/subject/1J3-OS-10-02/detail"
+        }
+    },
+    {
+        "title": "Speed Up of Hyperparameter Tuning with Nelder-Mead Method by Parallel Computing",
+        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki", "Masaki Onishi"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Pattern Recognition and Media Understanding (PRMU2019)",
+        "venueType": "Preprint",
+        "isOralPresentation": true,
+        "publishedMonth": 1,
+        "awardInfo": "PRMU 2018 Yearly Research Encouragement Award",
+        "publishedYear": 2019,
+        "urls": {
+            "paper": "https://ken.ieice.org/ken/paper/20190117W18i/"
+        }
+    },
+    {
+        "title": "Significant Runtime Reduction for Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Master thesis at the University of Freiburg (2023)",
+        "venueType": "Thesis",
+        "isOralPresentation": false,
+        "publishedMonth": 10,
+        "publishedYear": 2023,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/master-thesis.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/master-thesis.pdf",
+            "code": "https://github.com/nabenabe0928/master-thesis-experiment",
+            "slide": "https://drive.google.com/file/d/1n_JpyhQjkwBsD6zY3wiZA-WrPtnlQUMb/view?usp=drive_link",
+            "poster": "https://drive.google.com/file/d/1mEltRrbspjnG4p5K6UCP3zbiN9xtHv7z/view?usp=drive_link"
+        }
+    },
+    {
+        "title": "A Study on the Spontaneously Emerged Cooperation in a Collective Game with AI Type Agents",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Bachelor thesis at the University of Tokyo (2018)",
+        "venueType": "Thesis",
+        "isOralPresentation": false,
+        "publishedMonth": 3,
+        "publishedYear": 2018,
+        "urls": {}
+    },
+    {
+        "title": "Python Tool for Visualizing Variability of Pareto Fronts over Multiple Runs",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv:2305.08852 (2023)",
+        "venueType": "Preprint",
+        "isOralPresentation": false,
+        "publishedMonth": 5,
+        "publishedYear": 2023,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2305.08852",
+            "code": "https://github.com/nabenabe0928/empirical-attainment-func"
+        }
+    }
+]
