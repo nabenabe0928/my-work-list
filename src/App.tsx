@@ -1,11 +1,11 @@
-import React from "react"
-import PaperListPage from "./paperList"
+import "bootstrap/dist/css/bootstrap.min.css"
+import CenteredPaperListPage from "./paperList"
 
 export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <PaperListPage />
+        <CenteredPaperListPage />
       </header>
     </div>
   )

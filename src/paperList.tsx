@@ -3,7 +3,6 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import FilterListIcon from "@mui/icons-material/FilterList"
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import React from "react"
-import { Container } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
 
 const myName = "Shuhei Watanabe"
@@ -91,7 +90,7 @@ const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
     .filter((paper) => paper.venueType === venueType)
     .map((paper) => {
       const displayNameEl = paper.authorNames.map((name, i) => {
-        const nameString = i === paper.authorNames.length - 1 ? name : `${name}, `
+        const nameString = i === paper.authorNames.length - 1 ? `${name}.` : `${name}, `
         const isAuthorMe = name.includes(myName)
         const nameEl = isAuthorMe ? <b>{nameString}</b> : <>{nameString}</>
         if (paper.firstAuthors.length === 1 || !paper.firstAuthors.includes(name)) {
@@ -132,8 +131,8 @@ const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
       return (
         <>
           <li>
-            <p>{titleContent}</p>
-            <div style={{ marginBottom: "0.2em"}}>{displayNameEl}</div>
+            <p style={{ marginBottom: "0.4em" }}>{titleContent}</p>
+            <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
             <div style={styles.venueType}>
               {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
             </div>
@@ -142,9 +141,9 @@ const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
                 <span style={{ color: "red" }}>{paper.awardInfo}</span>
               </>
             ) : null}
-            <div style={{ marginBottom: "0.2em"}}>{getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}</div>
+            <div style={{ marginBottom: "0.2em" }}>{getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}</div>
             <></>
-            <div style={{ marginBottom: "1.0em"}}>
+            <div style={{ marginBottom: "1.0em" }}>
               {sourceInfo.map((src, i) => (i === sourceInfo.length - 1 ? src : <>{src}, </>))}
             </div>
           </li>
@@ -191,14 +190,31 @@ const PaperListPage = () => {
 
   const venueTypesToInclude = getVenueChoices(paperInfo).slice(1)
   return (
-    <Container className="mx-auto" style={{minHeight: "100vh"}}>
+    <>
+      <h1>Research Experiences</h1>
+      <p>
+        Here, I listed the referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
+        represents the equal contribution.
+      </p>
+      <p>
+        <b>NOTE</b>: I strongly recommend to read the arXiv version (if available) as I update
+        papers when needed.
+      </p>
+      <TableSortLabel
+        active={true}
+        direction={yearOrderByDescending ? "desc" : "asc"}
+        onClick={() => {
+          const newYearOrderByDescending = !yearOrderByDescending
+          setYearOrderByDescending(newYearOrderByDescending)
+        }}
+      >{`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}</TableSortLabel>
       <IconButton
-        size={"medium"}
+        size={"large"}
         onClick={(e) => {
           setFilterMenuAnchorEl(e.currentTarget)
         }}
       >
-        <FilterListIcon fontSize="small" />
+        <FilterListIcon fontSize="large" />
       </IconButton>
       <Menu
         anchorEl={filterMenuAnchorEl}
@@ -231,40 +247,28 @@ const PaperListPage = () => {
           )
         })}
       </Menu>
-      <TableSortLabel
-        active={true}
-        direction={yearOrderByDescending ? "desc" : "asc"}
-        onClick={() => {
-          const newYearOrderByDescending = !yearOrderByDescending
-          setYearOrderByDescending(newYearOrderByDescending)
-        }}
-      ></TableSortLabel>
-      {`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}
       {
         <>
-          <h1>Research Experiences</h1>
-          <p>
-            Here, I listed the referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
-            represents the equal contribution.
-          </p>
-          <p>
-            <b>NOTE</b>: I strongly recommend to read the arXiv version (if available) as I update
-            papers when needed.
-          </p>
           {venueTypesToInclude.map((venueType) => {
             return (
               <>
-                <h1>
+                <h2 style={{ marginBottom: "0.5em" }}>
                   <b>{venueType}</b>
-                </h1>
+                </h2>
                 <ol type="1">{getVenueInfoElement(venueType, paperInfo)}</ol>
               </>
             )
           })}
         </>
       }
-    </Container>
+    </>
   )
 }
 
-export default PaperListPage
+export default function CenteredPaperListPage() {
+  return (
+    <div className="mx-auto" style={{ minHeight: "100vh", width: "75%", textAlign: "left" }}>
+      <PaperListPage />
+    </div>
+  )
+}
