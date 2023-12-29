@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/my-work-list/static/js/main.209e4297.js",
+    "main.js": "/my-work-list/static/js/main.f4f056a0.js",
     "index.html": "/my-work-list/index.html",
-    "main.209e4297.js.map": "/my-work-list/static/js/main.209e4297.js.map"
+    "main.f4f056a0.js.map": "/my-work-list/static/js/main.f4f056a0.js.map"
   },
   "entrypoints": [
-    "static/js/main.209e4297.js"
+    "static/js/main.f4f056a0.js"
   ]
 }

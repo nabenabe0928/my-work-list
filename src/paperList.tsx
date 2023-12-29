@@ -3,41 +3,32 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import FilterListIcon from "@mui/icons-material/FilterList"
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import React from "react"
+import { Container } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
 
-const PaperListPage = () => {
-  const getFilterChoices = () => {
-    const venueTypes = fetchPaperInfo().map((paper) => paper.venueType)
-    const filterChoices = venueTypes
-      .filter((venueType, i) => venueTypes.indexOf(venueType) === i)
-      .sort()
-    return ["First Author Papers", ...filterChoices]
+const myName = "Shuhei Watanabe"
+const additionalFilterChoices = ["First Author Papers"]
+
+const styles = {
+  paperTitle: {
+    marginBottom: "0.0em",
+    color: "black",
+  },
+  venueType: {
+    marginBottom: "0.2em",
+    color: "#777777",
+  },
+  acceptanceRateInfo: {
+    marginBottom: "0.2em",
+    color: "#777777",
+  },
+};
+
+
+const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
+  if (paperInfo.every((paper) => paper.venueType !== venueType)) {
+    return null
   }
-  const myName = "Shuhei Watanabe"
-  const filterChoices = getFilterChoices()
-  const [filterMenuAnchorEl, setFilterMenuAnchorEl] = React.useState<null | HTMLElement>(null)
-  const [yearOrderByDescending, setYearOrderByDescending] = React.useState(true)
-  const [tickedMenus, setTickedMenus] = React.useState([
-    false,
-    ...Array(filterChoices.length - 1).fill(true),
-  ])
-
-  const originalPaperInfo = fetchPaperInfo().sort((paper1, paper2) => {
-    const i1 = filterChoices.indexOf(paper1.venueType)
-    const i2 = filterChoices.indexOf(paper2.venueType)
-    if (i1 !== i2) {
-      return i1 - i2
-    }
-
-    const yearOrder = paper2.publishedYear !== paper1.publishedYear
-      ? paper2.publishedYear - paper1.publishedYear
-      : paper2.publishedMonth - paper1.publishedMonth
-    return yearOrderByDescending ? yearOrder : -yearOrder
-  })
-
-  const paperInfo = originalPaperInfo
-    .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
-    .filter((paper) => (tickedMenus[0] ? paper.firstAuthors.includes(myName) : true))
 
   const getSourceInfo = (urls: MaterialURLs) => {
     const sourceInfo = []
@@ -95,8 +86,112 @@ const PaperListPage = () => {
     }
     return sourceInfo
   }
+
+  return paperInfo
+    .filter((paper) => paper.venueType === venueType)
+    .map((paper) => {
+      const displayNameEl = paper.authorNames.map((name, i) => {
+        const nameString = i === paper.authorNames.length - 1 ? name : `${name}, `
+        const isAuthorMe = name.includes(myName)
+        const nameEl = isAuthorMe ? <b>{nameString}</b> : <>{nameString}</>
+        if (paper.firstAuthors.length === 1 || !paper.firstAuthors.includes(name)) {
+          return nameEl
+        }
+        return (
+          <>
+            <span style={{ color: "red" }}>&clubs;</span> {nameEl}
+          </>
+        )
+      })
+      const urls = paper.urls
+      const titleContent = urls.paper ? (
+        <a href={urls.paper} target="_blank" style={styles.paperTitle}>
+          {paper.title}
+        </a>
+      ) : (
+        <div style={styles.paperTitle}>{paper.title}</div>
+      )
+      const sourceInfo = getSourceInfo(urls)
+      const getAcceptanceRateEl = (acceptanceCount?: number, submissionCount?: number) => {
+        if (!acceptanceCount || !submissionCount) {
+          return <></>
+        }
+        const acceptanceRate = Math.round((acceptanceCount / submissionCount) * 100)
+        return (
+          <div style={styles.acceptanceRateInfo}>
+            The acceptance rate was about{" "}
+            <b>
+              {acceptanceRate}% (={acceptanceCount}/{submissionCount})
+            </b>
+            .
+          </div>
+        )
+      }
+      // award more info
+      // oral acceptance rate
+      return (
+        <>
+          <li>
+            <p>{titleContent}</p>
+            <div style={{ marginBottom: "0.2em"}}>{displayNameEl}</div>
+            <div style={styles.venueType}>
+              {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
+            </div>
+            {paper.awardInfo ? (
+              <>
+                <span style={{ color: "red" }}>{paper.awardInfo}</span>
+              </>
+            ) : null}
+            <div style={{ marginBottom: "0.2em"}}>{getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}</div>
+            <></>
+            <div style={{ marginBottom: "1.0em"}}>
+              {sourceInfo.map((src, i) => (i === sourceInfo.length - 1 ? src : <>{src}, </>))}
+            </div>
+          </li>
+          <hr />
+        </>
+      )
+    })
+}
+
+const PaperListPage = () => {
+  const getVenueChoices = (paperInfo: PaperInfo[]) => {
+    const venueTypes = paperInfo.map((paper) => paper.venueType)
+    const filterChoices = venueTypes
+      .filter((venueType, i) => venueTypes.indexOf(venueType) === i)
+      .sort()
+    return [...additionalFilterChoices, ...filterChoices]
+  }
+  const filterChoices = getVenueChoices(fetchPaperInfo())
+  const [filterMenuAnchorEl, setFilterMenuAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [yearOrderByDescending, setYearOrderByDescending] = React.useState(true)
+  const [tickedMenus, setTickedMenus] = React.useState([
+    ...Array(additionalFilterChoices.length).fill(false),
+    ...Array(filterChoices.length - additionalFilterChoices.length).fill(true),
+  ])
+  console.log(tickedMenus)
+
+  const originalPaperInfo = fetchPaperInfo().sort((paper1, paper2) => {
+    const i1 = filterChoices.indexOf(paper1.venueType)
+    const i2 = filterChoices.indexOf(paper2.venueType)
+    if (i1 !== i2) {
+      return i1 - i2
+    }
+
+    const yearOrder =
+      paper2.publishedYear !== paper1.publishedYear
+        ? paper2.publishedYear - paper1.publishedYear
+        : paper2.publishedMonth - paper1.publishedMonth
+    return yearOrderByDescending ? yearOrder : -yearOrder
+  })
+
+  const paperInfo = originalPaperInfo
+    .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
+    .filter((paper) => (tickedMenus[0] ? paper.firstAuthors.includes(myName) : true))
+
+  const venueTypesToInclude = getVenueChoices(paperInfo).slice(1)
   return (
-    <>
+    <Container className="mx-auto" style={{minHeight: "100vh"}}>
       <IconButton
         size={"medium"}
         onClick={(e) => {
@@ -137,72 +232,38 @@ const PaperListPage = () => {
         })}
       </Menu>
       <TableSortLabel
-            active={true}
-            direction={yearOrderByDescending ? "desc" : "asc"}
-            onClick={() => {
-              const newYearOrderByDescending = !yearOrderByDescending
-              setYearOrderByDescending(newYearOrderByDescending)
-            }}
-          ></TableSortLabel>{`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}
-      {paperInfo.map((paper) => {
-        const displayNameEl = paper.authorNames.map((name, i) => {
-          const nameString = i === paper.authorNames.length - 1 ? name : `${name}, `
-          const isAuthorMe = name.includes(myName)
-          const nameEl = isAuthorMe ? <b>{nameString}</b> : <>{nameString}</>
-          if (paper.firstAuthors.length === 1 || !paper.firstAuthors.includes(name)) {
-            return nameEl
-          }
-          return (
-            <>
-              <span style={{ color: "red" }}>&clubs;</span> {nameEl}
-            </>
-          )
-        })
-        const urls = paper.urls
-        const titleContent = urls.paper ? (
-          <a href={urls.paper} target="_blank">
-            {paper.title}
-          </a>
-        ) : (
-          <>{paper.title}</>
-        )
-        const sourceInfo = getSourceInfo(urls)
-        const getAcceptanceRateEl = (acceptanceCount?: number, submissionCount?: number) => {
-          if (!acceptanceCount || !submissionCount) {
-            return <></>
-          }
-          const acceptanceRate = Math.round((acceptanceCount / submissionCount) * 100)
-          return (
-            <>
-              The acceptance rate was about{" "}
-              <b>
-                {acceptanceRate}% (={acceptanceCount}/{submissionCount})
-              </b>
-              .
-            </>
-          )
-        }
-        // award more info
-        // oral acceptance rate
-        return (
-          <>
-            <p>{titleContent}</p>
-            <div>{displayNameEl}</div>
-            <div>
-              {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
-            </div>
-            {paper.awardInfo ? (
+        active={true}
+        direction={yearOrderByDescending ? "desc" : "asc"}
+        onClick={() => {
+          const newYearOrderByDescending = !yearOrderByDescending
+          setYearOrderByDescending(newYearOrderByDescending)
+        }}
+      ></TableSortLabel>
+      {`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}
+      {
+        <>
+          <h1>Research Experiences</h1>
+          <p>
+            Here, I listed the referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
+            represents the equal contribution.
+          </p>
+          <p>
+            <b>NOTE</b>: I strongly recommend to read the arXiv version (if available) as I update
+            papers when needed.
+          </p>
+          {venueTypesToInclude.map((venueType) => {
+            return (
               <>
-                <span style={{ color: "red" }}>{paper.awardInfo}</span>
+                <h1>
+                  <b>{venueType}</b>
+                </h1>
+                <ol type="1">{getVenueInfoElement(venueType, paperInfo)}</ol>
               </>
-            ) : null}
-            <div>{getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}</div>
-            <></>
-            <p>{sourceInfo.map((src, i) => (i === sourceInfo.length - 1 ? src : <>{src}, </>))}</p>
-          </>
-        )
-      })}
-    </>
+            )
+          })}
+        </>
+      }
+    </Container>
   )
 }
 
