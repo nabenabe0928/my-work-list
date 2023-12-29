@@ -161,36 +161,39 @@ const PaperListPage = () => {
     const filterChoices = venueTypes
       .filter((venueType, i) => venueTypes.indexOf(venueType) === i)
       .sort()
-    return [...additionalFilterChoices, ...filterChoices]
+    return [...filterChoices, ...additionalFilterChoices]
   }
   const filterChoices = getVenueChoices(fetchPaperInfo())
+  const numVenueTypes = filterChoices.length - additionalFilterChoices.length
   const [filterMenuAnchorEl, setFilterMenuAnchorEl] = React.useState<null | HTMLElement>(null)
   const [yearOrderByDescending, setYearOrderByDescending] = React.useState(true)
   const [tickedMenus, setTickedMenus] = React.useState([
+    ...Array(numVenueTypes).fill(true),
     ...Array(additionalFilterChoices.length).fill(false),
-    ...Array(filterChoices.length - additionalFilterChoices.length).fill(true),
   ])
-  console.log(tickedMenus)
 
-  const originalPaperInfo = fetchPaperInfo().sort((paper1, paper2) => {
-    const i1 = filterChoices.indexOf(paper1.venueType)
-    const i2 = filterChoices.indexOf(paper2.venueType)
-    if (i1 !== i2) {
-      return i1 - i2
-    }
+  const paperInfo = fetchPaperInfo()
+    .sort((paper1, paper2) => {
+      const i1 = filterChoices.indexOf(paper1.venueType)
+      const i2 = filterChoices.indexOf(paper2.venueType)
+      if (i1 !== i2) {
+        return i1 - i2
+      }
 
-    const yearOrder =
-      paper2.publishedYear !== paper1.publishedYear
-        ? paper2.publishedYear - paper1.publishedYear
-        : paper2.publishedMonth - paper1.publishedMonth
-    return yearOrderByDescending ? yearOrder : -yearOrder
-  })
-
-  const paperInfo = originalPaperInfo
+      const yearOrder =
+        paper2.publishedYear !== paper1.publishedYear
+          ? paper2.publishedYear - paper1.publishedYear
+          : paper2.publishedMonth - paper1.publishedMonth
+      return yearOrderByDescending ? yearOrder : -yearOrder
+    })
     .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
-    .filter((paper) => (tickedMenus[0] ? paper.firstAuthors.includes(myName) : true))
+    .filter((paper) => (tickedMenus.slice(-1)[0] ? paper.firstAuthors.includes(myName) : true))
+  // NOTE: When we add another filter choice, we need to add a filter here and add it to additionalFilterChoices.
 
-  const venueTypesToInclude = getVenueChoices(paperInfo).slice(1)
+  const venueTypesToInclude = getVenueChoices(paperInfo).filter(
+    (venueType) => !additionalFilterChoices.includes(venueType)
+  )
+
   return (
     <>
       <h1>Research Experiences</h1>

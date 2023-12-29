@@ -227,7 +227,7 @@
     {
         "title": "Accelerating the Nelder-Mead Method with Predictive Evaluation",
         "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Masaki Onishi"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "firstAuthors": ["Yoshihiko Ozaki"],
         "venueName": "Workshop on Automated Machine Learning at ICML 2019 (AutoML2019)",
         "venueType": "Workshop",
         "isOralPresentation": false,
