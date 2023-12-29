@@ -3,6 +3,7 @@ import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import FilterListIcon from "@mui/icons-material/FilterList"
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import React from "react"
+import { Container, Row, Col } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
 
 const myName = "Shuhei Watanabe"
@@ -21,8 +22,7 @@ const styles = {
     marginBottom: "0.2em",
     color: "#777777",
   },
-};
-
+}
 
 const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
   if (paperInfo.every((paper) => paper.venueType !== venueType)) {
@@ -141,7 +141,9 @@ const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
                 <span style={{ color: "red" }}>{paper.awardInfo}</span>
               </>
             ) : null}
-            <div style={{ marginBottom: "0.2em" }}>{getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}</div>
+            <div style={{ marginBottom: "0.2em" }}>
+              {getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}
+            </div>
             <></>
             <div style={{ marginBottom: "1.0em" }}>
               {sourceInfo.map((src, i) => (i === sourceInfo.length - 1 ? src : <>{src}, </>))}
@@ -267,8 +269,12 @@ const PaperListPage = () => {
 
 export default function CenteredPaperListPage() {
   return (
-    <div className="mx-auto" style={{ minHeight: "100vh", width: "75%", textAlign: "left" }}>
-      <PaperListPage />
-    </div>
+    <Container fluid style={{ height: "100vh" }}>
+      <Row className="justify-content-md-center">
+        <Col xs={12} md={10} lg={7}>
+          <PaperListPage />
+        </Col>
+      </Row>
+    </Container>
   )
 }
