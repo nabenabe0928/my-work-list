@@ -1,11 +1,44 @@
+import { IconButton, ListItemIcon, Menu, MenuItem, TableSortLabel } from "@mui/material"
+import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
+import FilterListIcon from "@mui/icons-material/FilterList"
+import CheckBoxIcon from "@mui/icons-material/CheckBox"
+import React from "react"
 import fetchPaperInfo from "./fetchPublications"
 
 const PaperListPage = () => {
-  const paperInfo = fetchPaperInfo().sort((paper1, paper2) =>
-    paper2.publishedYear !== paper1.publishedYear
+  const getFilterChoices = () => {
+    const venueTypes = fetchPaperInfo().map((paper) => paper.venueType)
+    const filterChoices = venueTypes
+      .filter((venueType, i) => venueTypes.indexOf(venueType) === i)
+      .sort()
+    return ["First Author Papers", ...filterChoices]
+  }
+  const myName = "Shuhei Watanabe"
+  const filterChoices = getFilterChoices()
+  const [filterMenuAnchorEl, setFilterMenuAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [yearOrderByDescending, setYearOrderByDescending] = React.useState(true)
+  const [tickedMenus, setTickedMenus] = React.useState([
+    false,
+    ...Array(filterChoices.length - 1).fill(true),
+  ])
+
+  const originalPaperInfo = fetchPaperInfo().sort((paper1, paper2) => {
+    const i1 = filterChoices.indexOf(paper1.venueType)
+    const i2 = filterChoices.indexOf(paper2.venueType)
+    if (i1 !== i2) {
+      return i1 - i2
+    }
+
+    const yearOrder = paper2.publishedYear !== paper1.publishedYear
       ? paper2.publishedYear - paper1.publishedYear
       : paper2.publishedMonth - paper1.publishedMonth
-  )
+    return yearOrderByDescending ? yearOrder : -yearOrder
+  })
+
+  const paperInfo = originalPaperInfo
+    .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
+    .filter((paper) => (tickedMenus[0] ? paper.firstAuthors.includes(myName) : true))
+
   const getSourceInfo = (urls: MaterialURLs) => {
     const sourceInfo = []
     const getSourceContent = (urls: string[], srcNames: string[]) => {
@@ -64,10 +97,57 @@ const PaperListPage = () => {
   }
   return (
     <>
+      <IconButton
+        size={"medium"}
+        onClick={(e) => {
+          setFilterMenuAnchorEl(e.currentTarget)
+        }}
+      >
+        <FilterListIcon fontSize="small" />
+      </IconButton>
+      <Menu
+        anchorEl={filterMenuAnchorEl}
+        open={filterMenuAnchorEl !== null}
+        onClose={() => {
+          setFilterMenuAnchorEl(null)
+        }}
+      >
+        {filterChoices.map((choice, i) => {
+          return (
+            <div key={choice}>
+              <MenuItem
+                key={choice}
+                onClick={() => {
+                  const newTickedMenus = [...tickedMenus]
+                  newTickedMenus[i] = !tickedMenus[i]
+                  setTickedMenus(newTickedMenus)
+                }}
+              >
+                <ListItemIcon>
+                  {tickedMenus[i] ? (
+                    <CheckBoxIcon color="primary" />
+                  ) : (
+                    <CheckBoxOutlineBlankIcon color="primary" />
+                  )}
+                </ListItemIcon>
+                {choice}
+              </MenuItem>
+            </div>
+          )
+        })}
+      </Menu>
+      <TableSortLabel
+            active={true}
+            direction={yearOrderByDescending ? "desc" : "asc"}
+            onClick={() => {
+              const newYearOrderByDescending = !yearOrderByDescending
+              setYearOrderByDescending(newYearOrderByDescending)
+            }}
+          ></TableSortLabel>{`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}
       {paperInfo.map((paper) => {
         const displayNameEl = paper.authorNames.map((name, i) => {
           const nameString = i === paper.authorNames.length - 1 ? name : `${name}, `
-          const isAuthorMe = name.includes("Shuhei Watanabe")
+          const isAuthorMe = name.includes(myName)
           const nameEl = isAuthorMe ? <b>{nameString}</b> : <>{nameString}</>
           if (paper.firstAuthors.length === 1 || !paper.firstAuthors.includes(name)) {
             return nameEl
