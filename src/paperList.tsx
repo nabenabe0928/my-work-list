@@ -1,159 +1,14 @@
-import { IconButton, ListItemIcon, Menu, MenuItem, TableSortLabel } from "@mui/material"
+import { Button, IconButton, ListItemIcon, Menu, MenuItem, TableSortLabel } from "@mui/material"
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import FilterListIcon from "@mui/icons-material/FilterList"
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
+import { myName } from "./constantValues"
+import PaperElementBy from "./getPaperElementBy"
 
-const myName = "Shuhei Watanabe"
 const additionalFilterChoices = ["First Author Papers"]
-
-const styles = {
-  paperTitle: {
-    marginBottom: "0.0em",
-    color: "black",
-  },
-  venueType: {
-    marginBottom: "0.2em",
-    color: "#777777",
-  },
-  acceptanceRateInfo: {
-    marginBottom: "0.2em",
-    color: "#777777",
-  },
-}
-
-const getVenueInfoElement = (venueType: string, paperInfo: PaperInfo[]) => {
-  if (paperInfo.every((paper) => paper.venueType !== venueType)) {
-    return null
-  }
-
-  const getSourceInfo = (urls: MaterialURLs) => {
-    const sourceInfo = []
-    const getSourceContent = (urls: string[], srcNames: string[]) => {
-      const elements = urls.map((url, i) => (
-        <a href={url} target="_blank">
-          {srcNames[i]}
-        </a>
-      ))
-      return <>({elements.map((e, i) => (i !== elements.length - 1 ? <>{e}/</> : e))})</>
-    }
-    if (urls.arxiv) {
-      sourceInfo.push(getSourceContent([urls.arxiv], ["arXiv"]))
-    }
-    if (urls.pdf) {
-      sourceInfo.push(getSourceContent([urls.pdf], [!urls.arxiv ? "PDF" : "Outdated PDF"]))
-    }
-    if (urls.code) {
-      sourceInfo.push(getSourceContent([urls.code], ["code"]))
-    }
-    if (urls.poster) {
-      sourceInfo.push(getSourceContent([urls.poster], ["poster"]))
-    }
-    if (urls.slide) {
-      if (urls.video && urls.videoTranscript) {
-        sourceInfo.push(
-          getSourceContent(
-            [urls.slide, urls.video, urls.videoTranscript],
-            ["slides", "video", "transcript"]
-          )
-        )
-      } else if (urls.video) {
-        sourceInfo.push(getSourceContent([urls.slide, urls.video], ["slides", "video"]))
-      } else if (urls.videoTranscript) {
-        sourceInfo.push(
-          getSourceContent([urls.slide, urls.videoTranscript], ["slides", "transcript"])
-        )
-      } else {
-        sourceInfo.push(getSourceContent([urls.slide], ["slides"]))
-      }
-    } else if (urls.video && urls.videoTranscript) {
-      sourceInfo.push(
-        getSourceContent([urls.video, urls.videoTranscript], ["video", "transcript"])
-      )
-    } else if (urls.video) {
-      sourceInfo.push(getSourceContent([urls.video], ["video"]))
-    }
-    if (urls.shortVideo && urls.shortVideoTranscript) {
-      sourceInfo.push(
-        getSourceContent(
-          [urls.shortVideo, urls.shortVideoTranscript],
-          ["short video", "transcript"]
-        )
-      )
-    }
-    return sourceInfo
-  }
-
-  return paperInfo
-    .filter((paper) => paper.venueType === venueType)
-    .map((paper) => {
-      const displayNameEl = paper.authorNames.map((name, i) => {
-        const nameString = i === paper.authorNames.length - 1 ? `${name}.` : `${name}, `
-        const isAuthorMe = name.includes(myName)
-        const nameEl = isAuthorMe ? <b>{nameString}</b> : <>{nameString}</>
-        if (paper.firstAuthors.length === 1 || !paper.firstAuthors.includes(name)) {
-          return nameEl
-        }
-        return (
-          <>
-            <span style={{ color: "red" }}>&clubs;</span> {nameEl}
-          </>
-        )
-      })
-      const urls = paper.urls
-      const titleContent = urls.paper ? (
-        <a href={urls.paper} target="_blank" style={styles.paperTitle}>
-          {paper.title}
-        </a>
-      ) : (
-        <div style={styles.paperTitle}>{paper.title}</div>
-      )
-      const sourceInfo = getSourceInfo(urls)
-      const getAcceptanceRateEl = (acceptanceCount?: number, submissionCount?: number) => {
-        if (!acceptanceCount || !submissionCount) {
-          return <></>
-        }
-        const acceptanceRate = Math.round((acceptanceCount / submissionCount) * 100)
-        return (
-          <div style={styles.acceptanceRateInfo}>
-            The acceptance rate was about{" "}
-            <b>
-              {acceptanceRate}% (={acceptanceCount}/{submissionCount})
-            </b>
-            .
-          </div>
-        )
-      }
-      // award more info
-      // oral acceptance rate
-      return (
-        <>
-          <li>
-            <p style={{ marginBottom: "0.4em" }}>{titleContent}</p>
-            <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
-            <div style={styles.venueType}>
-              {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
-            </div>
-            {paper.awardInfo ? (
-              <>
-                <span style={{ color: "red" }}>{paper.awardInfo}</span>
-              </>
-            ) : null}
-            <div style={{ marginBottom: "0.2em" }}>
-              {getAcceptanceRateEl(paper.acceptanceCount, paper.submissionCount)}
-            </div>
-            <></>
-            <div style={{ marginBottom: "1.0em" }}>
-              {sourceInfo.map((src, i) => (i === sourceInfo.length - 1 ? src : <>{src}, </>))}
-            </div>
-          </li>
-          <hr />
-        </>
-      )
-    })
-}
 
 const PaperListPage = () => {
   const getVenueChoices = (paperInfo: PaperInfo[]) => {
@@ -166,7 +21,9 @@ const PaperListPage = () => {
   const filterChoices = getVenueChoices(fetchPaperInfo())
   const numVenueTypes = filterChoices.length - additionalFilterChoices.length
   const [filterMenuAnchorEl, setFilterMenuAnchorEl] = React.useState<null | HTMLElement>(null)
+  const [groupByMenuAnchorEl, setGroupByMenuAnchorEl] = React.useState<null | HTMLElement>(null)
   const [yearOrderByDescending, setYearOrderByDescending] = React.useState(true)
+  const [groupBy, setGroupBy] = React.useState<"venueType" | "year">("venueType")
   const [tickedMenus, setTickedMenus] = React.useState([
     ...Array(numVenueTypes).fill(true),
     ...Array(additionalFilterChoices.length).fill(false),
@@ -176,15 +33,20 @@ const PaperListPage = () => {
     .sort((paper1, paper2) => {
       const i1 = filterChoices.indexOf(paper1.venueType)
       const i2 = filterChoices.indexOf(paper2.venueType)
-      if (i1 !== i2) {
-        return i1 - i2
-      }
-
-      const yearOrder =
+      const venueOrder = i1 - i2
+      const unsingedYearOrder =
         paper2.publishedYear !== paper1.publishedYear
           ? paper2.publishedYear - paper1.publishedYear
           : paper2.publishedMonth - paper1.publishedMonth
-      return yearOrderByDescending ? yearOrder : -yearOrder
+      const yearOrder = yearOrderByDescending ? unsingedYearOrder : -unsingedYearOrder
+      if (groupBy === "venueType") {
+        return venueOrder !== 0 ? venueOrder : yearOrder
+      } else if (groupBy === "year") {
+        return yearOrder !== 0 ? yearOrder : venueOrder
+      } else {
+        console.log(`Got an unexpected groupBy=${groupBy} in sort.`)
+        return 0
+      }
     })
     .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
     .filter((paper) => (tickedMenus.slice(-1)[0] ? paper.firstAuthors.includes(myName) : true))
@@ -193,6 +55,12 @@ const PaperListPage = () => {
   const venueTypesToInclude = getVenueChoices(paperInfo).filter(
     (venueType) => !additionalFilterChoices.includes(venueType)
   )
+  const getPaperYears = () => {
+    // NOTE: paperInfo is already sorted by year when groupBy === "year".
+    const years = paperInfo.map((paper) => paper.publishedYear)
+    return years.filter((y, i) => years.indexOf(y) === i)
+  }
+  const yearsToInclude = getPaperYears()
 
   return (
     <>
@@ -252,7 +120,39 @@ const PaperListPage = () => {
           )
         })}
       </Menu>
-      {
+      <Button
+        aria-controls="group-by-menu"
+        aria-haspopup="true"
+        onClick={(e) => {
+          setGroupByMenuAnchorEl(e.currentTarget)
+        }}
+      >
+        Group By
+      </Button>
+      <Menu
+        id="group-by-menu"
+        anchorEl={groupByMenuAnchorEl}
+        open={Boolean(groupByMenuAnchorEl)}
+        onClose={() => setGroupByMenuAnchorEl(null)}
+      >
+        <MenuItem
+          onClick={() => {
+            setGroupByMenuAnchorEl(null)
+            setGroupBy("venueType")
+          }}
+        >
+          Venu Type
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            setGroupByMenuAnchorEl(null)
+            setGroupBy("year")
+          }}
+        >
+          Year
+        </MenuItem>
+      </Menu>
+      {groupBy === "venueType" ? (
         <>
           {venueTypesToInclude.map((venueType) => {
             return (
@@ -260,12 +160,25 @@ const PaperListPage = () => {
                 <h2 style={{ marginBottom: "0.5em" }}>
                   <b>{venueType}</b>
                 </h2>
-                <ol type="1">{getVenueInfoElement(venueType, paperInfo)}</ol>
+                <ol type="1">{<PaperElementBy paperInfo={paperInfo} venueType={venueType} />}</ol>
               </>
             )
           })}
         </>
-      }
+      ) : groupBy === "year" ? (
+        <>
+          {yearsToInclude.map((year) => {
+            return (
+              <>
+                <h2 style={{ marginBottom: "0.5em" }}>
+                  <b>{year}</b>
+                </h2>
+                <ol type="1">{<PaperElementBy paperInfo={paperInfo} year={year} />}</ol>
+              </>
+            )
+          })}
+        </>
+      ) : null}
     </>
   )
 }
