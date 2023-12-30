@@ -61,6 +61,8 @@ const PaperListPage = () => {
     return years.filter((y, i) => years.indexOf(y) === i)
   }
   const yearsToInclude = getPaperYears()
+  const tickMark = <span>&#10003;</span>
+  const hSpace = <span style={{ margin: "0em 0.45em" }}></span>
 
   return (
     <>
@@ -141,7 +143,7 @@ const PaperListPage = () => {
             setGroupBy("venueType")
           }}
         >
-          Venu Type
+          {groupBy === "venueType" ? tickMark : hSpace}{"Venue Type"}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -149,7 +151,7 @@ const PaperListPage = () => {
             setGroupBy("year")
           }}
         >
-          Year
+          {groupBy === "year" ? tickMark : hSpace}{"Year"}
         </MenuItem>
       </Menu>
       {groupBy === "venueType" ? (
