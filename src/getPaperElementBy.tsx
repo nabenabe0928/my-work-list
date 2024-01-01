@@ -31,7 +31,7 @@ const getPaperItem = (paper: PaperInfo) => {
   })
   const urls = paper.urls
   const titleContent = urls.paper ? (
-    <a href={urls.paper} target="_blank" style={styles.paperTitle}>
+    <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
       {paper.title}
     </a>
   ) : (
@@ -42,7 +42,7 @@ const getPaperItem = (paper: PaperInfo) => {
     const sourceInfo = []
     const getSourceContent = (urls: string[], srcNames: string[]) => {
       const elements = urls.map((url, i) => (
-        <a href={url} target="_blank">
+        <a href={url} target="_blank" key={`${srcNames[i]}-${paper.title}`}>
           {srcNames[i]}
         </a>
       ))
@@ -116,7 +116,7 @@ const getPaperItem = (paper: PaperInfo) => {
   return (
     <>
       <li>
-        <p style={{ marginBottom: "0.4em" }}>{titleContent}</p>
+        <div style={{ marginBottom: "0.4em" }}>{titleContent}</div>
         <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
         <div style={styles.venueType}>
           {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
