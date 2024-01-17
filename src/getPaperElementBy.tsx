@@ -119,7 +119,7 @@ const getPaperItem = (paper: PaperInfo) => {
         <div style={{ marginBottom: "0.4em" }}>{titleContent}</div>
         <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
         <div style={styles.venueType}>
-          {paper.venueName}. {paper.isOralPresentation ? "Oral Presentation." : null}
+          {paper.venueName}{paper.isForthcoming ? " (Forthcoming)" : null}. {paper.isOralPresentation ? "Oral Presentation." : null}
         </div>
         {paper.awardInfo ? (
           <>

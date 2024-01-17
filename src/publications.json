@@ -9,6 +9,7 @@
         "submissionCount": 10000,
         "acceptanceCount": 1000,
         "awardInfo": "Award information",
+        "isForthcoming": false,
         "publishedMonth": 1,
         "publishedYear": 2024,
         "urls": {
@@ -30,7 +31,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
         "venueType": "Conference",
-        "isOralPresentation": false,
         "submissionCount": 4566,
         "acceptanceCount": 644,
         "publishedMonth": 8,
@@ -50,7 +50,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
         "venueType": "Conference",
-        "isOralPresentation": false,
         "submissionCount": 4566,
         "acceptanceCount": 644,
         "publishedMonth": 8,
@@ -70,7 +69,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "International Joint Conference on Artificial Intelligence 2023 (IJCAI2023)",
         "venueType": "Conference",
-        "isOralPresentation": false,
         "submissionCount": 4566,
         "acceptanceCount": 644,
         "publishedMonth": 8,
@@ -90,7 +88,6 @@
         "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
         "venueName": "AAAI Conference on Artificial Intelligence (AAAI2021)",
         "venueType": "Conference",
-        "isOralPresentation": false,
         "submissionCount": 9034,
         "acceptanceCount": 1692,
         "publishedMonth": 1,
@@ -161,7 +158,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "AutoML Conference 2023 Workshop Track",
         "venueType": "Workshop",
-        "isOralPresentation": false,
         "publishedMonth": 9,
         "publishedYear": 2023,
         "urls": {
@@ -181,7 +177,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "Workshop on Gaussian Processes, Spatiotemporal Modeling, and Decision-making Systems at NeurIPS 2022 (GPSMDM2022)",
         "venueType": "Workshop",
-        "isOralPresentation": false,
         "publishedMonth": 12,
         "publishedYear": 2022,
         "urls": {
@@ -198,7 +193,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "Workshop on Meta-Learning at NeurIPS 2022 (MetaLearn2022)",
         "venueType": "Workshop",
-        "isOralPresentation": false,
         "publishedMonth": 12,
         "publishedYear": 2022,
         "urls": {
@@ -215,7 +209,6 @@
         "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
         "venueName": "Workshop on Meta-Learning at NeurIPS 2019 (MetaLearn2019)",
         "venueType": "Workshop",
-        "isOralPresentation": false,
         "publishedMonth": 12,
         "publishedYear": 2019,
         "urls": {
@@ -230,7 +223,6 @@
         "firstAuthors": ["Yoshihiko Ozaki"],
         "venueName": "Workshop on Automated Machine Learning at ICML 2019 (AutoML2019)",
         "venueType": "Workshop",
-        "isOralPresentation": false,
         "publishedMonth": 7,
         "publishedYear": 2019,
         "urls": {
@@ -245,7 +237,6 @@
         "firstAuthors": ["Yoshihiko Ozaki"],
         "venueName": "Journal of Artificial Intelligence Research (JAIR2022)",
         "venueType": "Journal",
-        "isOralPresentation": false,
         "publishedMonth": 3,
         "publishedYear": 2022,
         "urls": {
@@ -260,7 +251,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "arXiv:2304.11127 (2023)",
         "venueType": "Preprint",
-        "isOralPresentation": false,
         "publishedMonth": 3,
         "publishedYear": 2023,
         "urls": {
@@ -274,7 +264,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "Japanese Society for Artificial Intelligence (JSAI2020)",
         "venueType": "Preprint",
-        "isOralPresentation": false,
         "publishedMonth": 3,
         "publishedYear": 2020,
         "urls": {
@@ -301,7 +290,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "Master thesis at the University of Freiburg (2023)",
         "venueType": "Thesis",
-        "isOralPresentation": false,
         "publishedMonth": 10,
         "publishedYear": 2023,
         "urls": {
@@ -318,7 +306,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "Bachelor thesis at the University of Tokyo (2018)",
         "venueType": "Thesis",
-        "isOralPresentation": false,
         "publishedMonth": 3,
         "publishedYear": 2018,
         "urls": {}
@@ -329,7 +316,6 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "arXiv:2305.08852 (2023)",
         "venueType": "Preprint",
-        "isOralPresentation": false,
         "publishedMonth": 5,
         "publishedYear": 2023,
         "urls": {

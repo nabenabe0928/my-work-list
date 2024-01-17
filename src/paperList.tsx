@@ -62,7 +62,7 @@ const PaperListPage = () => {
   }
   const yearsToInclude = getPaperYears()
   const tickMark = <span>&#10003;</span>
-  const hSpace = <span style={ { visibility: "hidden" } }>&#10003;</span>
+  const hSpace = <span style={{ visibility: "hidden" }}>&#10003;</span>
 
   return (
     <>
@@ -143,7 +143,8 @@ const PaperListPage = () => {
             setGroupBy("venueType")
           }}
         >
-          {groupBy === "venueType" ? tickMark : hSpace}{" Venue Type"}
+          {groupBy === "venueType" ? tickMark : hSpace}
+          {" Venue Type"}
         </MenuItem>
         <MenuItem
           onClick={() => {
@@ -151,7 +152,8 @@ const PaperListPage = () => {
             setGroupBy("year")
           }}
         >
-          {groupBy === "year" ? tickMark : hSpace}{" Year"}
+          {groupBy === "year" ? tickMark : hSpace}
+          {" Year"}
         </MenuItem>
       </Menu>
       {groupBy === "venueType" ? (
