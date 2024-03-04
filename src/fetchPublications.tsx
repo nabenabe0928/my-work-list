@@ -4,7 +4,9 @@ const dataArray = (data as any).default
 
 const fetchPaperInfo = (): PaperInfo[] => {
   const paperInfoArray: PaperInfo[] = dataArray
-  return paperInfoArray.filter((paper) => paper.title !== "example")
+  const paperInfo = paperInfoArray.filter((paper) => paper.title !== "example")
+  console.log(paperInfo[0].title)
+  return paperInfo
 }
 
 export default fetchPaperInfo
