@@ -26,6 +26,20 @@
         }
     },
     {
+        "title": "Fast Benchmarking of Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
+        "authorNames": ["Shuhei Watanabe", "Neeratyoy Mallik", "Edward Bergman", "Frank Hutter"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv (2024)",
+        "venueType": "Preprint",
+        "publishedMonth": 3,
+        "publishedYear": 2024,
+        "urls": {
+            "code": "https://github.com/nabenabe0928/mfhpo-simulator-experiments/",
+            "slide": "https://drive.google.com/file/d/1n_JpyhQjkwBsD6zY3wiZA-WrPtnlQUMb/view?usp=drive_link",
+            "poster": "https://drive.google.com/file/d/1mEltRrbspjnG4p5K6UCP3zbiN9xtHv7z/view?usp=drive_link"
+        }
+    },
+    {
         "title": "c-TPE: Tree-Structured Parzen Estimator with Inequality Constraints for Expensive Hyperparameter Optimization",
         "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
         "firstAuthors": ["Shuhei Watanabe"],
