@@ -98,6 +98,21 @@
         }
     },
     {
+        "title": "MAS-Bench: Parameter Optimization Benchmark for Multi-Agent Crowd Simulation",
+        "authorNames": ["Shusuke Shigenaka", "Shunki Takami", "Shuhei Watanabe", "Yuki Tanigaki", "Yoshihiko Ozaki", "Masaki Onishi"],
+        "firstAuthors": ["Shusuke Shigenaka"],
+        "venueName": "International Conference on Autonomous Agents and MultiAgent Systems (AAMAS2021)",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "publishedMonth": 5,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://www.ifaamas.org/Proceedings/aamas2021/forms/contents.htm#3",
+            "pdf": "https://www.ifaamas.org/Proceedings/aamas2021/pdfs/p1652.pdf",
+            "code": "https://github.com/MAS-Bench/MAS-Bench"
+        }
+    },
+    {
         "title": "Warm Starting CMA-ES for Hyperparameter Optimization",
         "authorNames": ["Masahiro Nomura", "Shuhei Watanabe", "Youhei Akimoto", "Yoshihiko Ozaki", "Masaki Onishi"],
         "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
@@ -109,15 +124,7 @@
         "publishedYear": 2021,
         "urls": {
             "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/17109/16916",
-            "arxiv": "https://arxiv.org/abs/2012.06932",
-            "pdf": "",
-            "code": "",
-            "slide": "",
-            "poster": "",
-            "video": "",
-            "shortVideo": "",
-            "videoTranscript": "",
-            "shortVideoTranscript": ""
+            "arxiv": "https://arxiv.org/abs/2012.06932"
         }
     },
     {
