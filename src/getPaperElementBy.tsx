@@ -113,13 +113,14 @@ const getPaperItem = (paper: PaperInfo) => {
   }
   // award more info
   // oral acceptance rate
+  const venueInfo = `${paper.venueNameAbbreviation || ""}${paper.publishedYear}`
   return (
     <>
       <li>
         <div style={{ marginBottom: "0.4em" }}>{titleContent}</div>
         <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
         <div style={styles.venueType}>
-          {paper.venueName}{paper.isForthcoming ? " (Forthcoming)" : null}. {paper.isOralPresentation ? "Oral Presentation." : null}
+          {paper.venueName}{` (${venueInfo})`}{paper.isForthcoming ? " (Forthcoming)" : null}. {paper.isOralPresentation ? "Oral Presentation." : null}
         </div>
         {paper.awardInfo ? (
           <>
