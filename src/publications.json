@@ -27,6 +27,21 @@
         }
     },
     {
+        "title": "MAS-Bench: A Benchmarking for Parameter Calibration of Multi-agent Crowd Simulation",
+        "authorNames": ["Shusuke Shigenaka", "Shunki Takami", "Shuhei Watanabe", "Yuki Tanigaki", "Masaki Onishi"],
+        "firstAuthors": ["Shusuke Shigenaka"],
+        "venueName": "Journal of Computational Social Science",
+        "venueNameAbbreviation": "JCSS",
+        "venueType": "Journal",
+        "publishedMonth": 7,
+        "publishedYear": 2024,
+        "isForthcoming": true,
+        "urls": {
+            "paper": "https://link.springer.com/journal/42001",
+            "code": "https://github.com/MAS-Bench/MAS-Bench"
+        }
+    },
+    {
         "title": "Fast Benchmarking of Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
         "authorNames": ["Shuhei Watanabe", "Neeratyoy Mallik", "Edward Bergman", "Frank Hutter"],
         "firstAuthors": ["Shuhei Watanabe"],
@@ -39,7 +54,7 @@
         "publishedMonth": 9,
         "publishedYear": 2024,
         "urls": {
-            "paper": "https://2024.automl.cc/program/accepted_papers/",
+            "paper": "https://2024.automl.cc/?page_id=1406",
             "arxiv": "https://arxiv.org/abs/2403.01888",
             "code": "https://github.com/nabenabe0928/mfhpo-simulator-experiments/",
             "slide": "https://drive.google.com/file/d/1n_JpyhQjkwBsD6zY3wiZA-WrPtnlQUMb/view?usp=drive_link",
