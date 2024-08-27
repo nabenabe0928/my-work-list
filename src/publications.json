@@ -54,11 +54,12 @@
         "publishedMonth": 9,
         "publishedYear": 2024,
         "urls": {
-            "paper": "https://2024.automl.cc/?page_id=1406",
+            "paper": "https://openreview.net/forum?id=uisnH6jUDz",
             "arxiv": "https://arxiv.org/abs/2403.01888",
             "code": "https://github.com/nabenabe0928/mfhpo-simulator-experiments/",
-            "slide": "https://drive.google.com/file/d/1n_JpyhQjkwBsD6zY3wiZA-WrPtnlQUMb/view?usp=drive_link",
-            "poster": "https://drive.google.com/file/d/1mEltRrbspjnG4p5K6UCP3zbiN9xtHv7z/view?usp=drive_link"
+            "slide": "https://drive.google.com/file/d/1BNvcSCGwRW8gSSK3egyNpya5n9YeThIH/view?usp=drive_link",
+            "poster": "https://drive.google.com/file/d/14j6CDyg_V4yQS9c74z0yeiRr7u3VXObU/view?usp=sharing",
+            "videoTranscript": "https://drive.google.com/file/d/1cAc5U8B0OuKd3PjyNwFEQ1CILAsKLb-z/view?usp=drive_link"
         }
     },
     {
