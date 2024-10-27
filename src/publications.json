@@ -13,6 +13,7 @@
         "isForthcoming": false,
         "publishedMonth": 1,
         "publishedYear": 2024,
+        "isJapaneseOnly": false,
         "urls": {
             "paper": "Paper URL at the venue website",
             "arxiv": "arXiv URL",
@@ -326,6 +327,7 @@
         "venueType": "Preprint",
         "publishedMonth": 3,
         "publishedYear": 2020,
+        "isJapaneseOnly": true,
         "urls": {
             "paper": "https://confit.atlas.jp/guide/event/jsai2020/subject/1J3-OS-10-02/detail"
         }
@@ -341,6 +343,7 @@
         "publishedMonth": 1,
         "awardInfo": "PRMU 2018 Yearly Research Encouragement Award",
         "publishedYear": 2019,
+        "isJapaneseOnly": true,
         "urls": {
             "paper": "https://ken.ieice.org/ken/paper/20190117W18i/"
         }
@@ -369,6 +372,7 @@
         "venueType": "Thesis",
         "publishedMonth": 3,
         "publishedYear": 2018,
+        "isJapaneseOnly": true,
         "urls": {}
     },
     {

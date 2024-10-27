@@ -63,6 +63,7 @@ const PaperListPage = () => {
   const yearsToInclude = getPaperYears()
   const tickMark = <span>&#10003;</span>
   const hSpace = <span style={{ visibility: "hidden" }}>&#10003;</span>
+  const noSearchFoundComment = "No Search Results Found."
 
   return (
     <>
@@ -156,7 +157,7 @@ const PaperListPage = () => {
           {" Year"}
         </MenuItem>
       </Menu>
-      {groupBy === "venueType" ? (
+      {paperInfo.length === 0 ? (<><p>{noSearchFoundComment}</p></>) : groupBy === "venueType" ? (
         <>
           {venueTypesToInclude.map((venueType) => {
             return (

@@ -30,12 +30,20 @@ const getPaperItem = (paper: PaperInfo) => {
     )
   })
   const urls = paper.urls
-  const titleContent = urls.paper ? (
-    <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
-      {paper.title}
-    </a>
-  ) : (
-    <div style={styles.paperTitle}>{paper.title}</div>
+  const japaneseOnlyPrefix = <><b>[Japanese Only] </b></>
+  const titleContent = (
+    <>
+    <>{paper.isJapaneseOnly ? japaneseOnlyPrefix : null}</>
+    <>{
+      urls.paper ? (
+        <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
+        {paper.title}
+        </a>        
+      ) : (
+        <span style={styles.paperTitle}>{paper.title}</span>
+      )
+    }</>
+    </>
   )
 
   const getSourceInfo = (urls: MaterialURLs) => {

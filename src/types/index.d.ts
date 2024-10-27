@@ -20,6 +20,7 @@ type PaperInfo = {
   venueType: "Conference" | "Workshop" | "Journal" | "Preprint" | "Thesis"
   isOralPresentation?: boolean
   awardInfo?: string
+  isJapaneseOnly?: boolean
   submissionCount?: number
   acceptanceCount?: number
   publishedYear: number
