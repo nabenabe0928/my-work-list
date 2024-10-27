@@ -8,7 +8,7 @@ import fetchPaperInfo from "./fetchPublications"
 import { myName } from "./constantValues"
 import PaperElementBy from "./getPaperElementBy"
 
-const additionalFilterChoices = ["First Author Papers"]
+const additionalFilterChoices = ["First Author Papers", "Remove Japanese Papers"]
 
 const PaperListPage = () => {
   const getVenueChoices = (paperInfo: PaperInfo[]) => {
@@ -49,7 +49,8 @@ const PaperListPage = () => {
       }
     })
     .filter((paper) => tickedMenus[filterChoices.indexOf(paper.venueType)])
-    .filter((paper) => (tickedMenus.slice(-1)[0] ? paper.firstAuthors.includes(myName) : true))
+    .filter((paper) => (tickedMenus.slice(-2)[0] ? paper.firstAuthors.includes(myName) : true))
+    .filter((paper) => (tickedMenus.slice(-1)[0] ? !paper.isJapaneseOnly : true))
   // NOTE: When we add another filter choice, we need to add a filter here and add it to additionalFilterChoices.
 
   const venueTypesToInclude = getVenueChoices(paperInfo).filter(
