@@ -5,7 +5,7 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "AAAI Conference on Artificial Intelligence",
         "venueNameAbbreviation": "AAAI",
-        "venueType": "Conference or Workshop or Journal or Preprint or Thesis",
+        "venueType": "Conference or Workshop or Journal or Preprint or Thesis or Talk",
         "isOralPresentation": false,
         "submissionCount": 10000,
         "acceptanceCount": 1000,
@@ -25,6 +25,19 @@
             "shortVideo": "Short video URL",
             "videoTranscript": "Transcript for video",
             "shortVideoTranscript": "Transcript for short video"
+        }
+    },
+    {
+        "title": "Multi-Objective Bayesian Optimization for Materials Discovery with Neural Network Potential -- An Application to Li-Ion Battery Cathode Material",
+        "authorNames": ["Shuhei Watanabe", "Hideaki Imamura", "Chikashi Shinagawa", "Kohei Shinohara", "So Takamoto", "Ju Li"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Materials Research Society Fall Meeting & Exhibit",
+        "venueNameAbbreviation": "MRS Fall ",
+        "venueType": "Talk",
+        "publishedMonth": 12,
+        "publishedYear": 2024,
+        "urls": {
+            "paper": "https://www.mrs.org/meetings-events/annual-meetings/2024-mrs-fall-meeting/symposium-sessions/presentations/view/2024-fall-meeting/2024-fall-meeting-4150576"
         }
     },
     {
