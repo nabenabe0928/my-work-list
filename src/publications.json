@@ -49,7 +49,6 @@
         "venueType": "Journal",
         "publishedMonth": 7,
         "publishedYear": 2024,
-        "isForthcoming": true,
         "urls": {
             "paper": "https://link.springer.com/journal/42001",
             "code": "https://github.com/MAS-Bench/MAS-Bench"
@@ -64,7 +63,6 @@
         "venueType": "Conference",
         "submissionCount": 45,
         "acceptanceCount": 19,
-        "isForthcoming": true,
         "publishedMonth": 9,
         "publishedYear": 2024,
         "urls": {
