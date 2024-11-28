@@ -28,6 +28,18 @@
         }
     },
     {
+        "title": "Derivation of Closed Form of Expected Improvement for Gaussian Process Trained on Log-Transformed Objective",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv:2411.18095",
+        "venueType": "Preprint",
+        "publishedMonth": 11,
+        "publishedYear": 2024,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2411.18095"
+        }
+    },
+    {
         "title": "Multi-Objective Bayesian Optimization for Materials Discovery with Neural Network Potential -- An Application to Li-Ion Battery Cathode Material",
         "authorNames": ["Shuhei Watanabe", "Hideaki Imamura", "Chikashi Shinagawa", "Kohei Shinohara", "So Takamoto", "Ju Li"],
         "firstAuthors": ["Shuhei Watanabe"],
