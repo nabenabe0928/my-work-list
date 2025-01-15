@@ -28,6 +28,18 @@
         }
     },
     {
+        "title": "Derivation of Output Correlation Inferences for Multi-Output (aka Multi-Task) Gaussian Process",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv:2501.07964",
+        "venueType": "Preprint",
+        "publishedMonth": 1,
+        "publishedYear": 2025,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2501.07964"
+        }
+    },
+    {
         "title": "Derivation of Closed Form of Expected Improvement for Gaussian Process Trained on Log-Transformed Objective",
         "authorNames": ["Shuhei Watanabe"],
         "firstAuthors": ["Shuhei Watanabe"],
