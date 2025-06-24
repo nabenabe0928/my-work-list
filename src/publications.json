@@ -28,6 +28,22 @@
         }
     },
     {
+        "title": "Preference-Optimal Multi-Metric Weighting for Parallel Coordinate Plots",
+        "authorNames": ["Chisa Mori", "Shuhei Watanabe", "Masaki Onishi", "Takayuki Itoh"],
+        "firstAuthors": ["Chisa Mori", "Shuhei Watanabe"],
+        "venueName": "International Conference Information Visualisation",
+        "venueNameAbbreviation": "iV",
+        "venueType": "Conference",
+        "isOralPresentation": false,
+        "isForthcoming": true,
+        "publishedMonth": 8,
+        "publishedYear": 2025,
+        "urls": {
+            "_arxiv": "Coming soon",
+            "paper": "https://iv.csites.fct.unl.pt/de/"
+        }
+    },
+    {
         "title": "User Preference-Based Parallel Coordinate Plots: Its Application in Guidance Planning",
         "authorNames": ["Chisa Mori", "Shuhei Watanabe", "Masaki Onishi", "Takayuki Itoh"],
         "firstAuthors": ["Chisa Mori"],
