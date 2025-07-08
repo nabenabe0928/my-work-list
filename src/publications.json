@@ -39,7 +39,7 @@
         "publishedMonth": 8,
         "publishedYear": 2025,
         "urls": {
-            "_arxiv": "Coming soon",
+            "arxiv": "https://arxiv.org/abs/2507.02905",
             "paper": "https://iv.csites.fct.unl.pt/de/"
         }
     },
