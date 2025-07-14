@@ -28,6 +28,19 @@
         }
     },
     {
+        "title": "Tree-Structured Parzen Estimator Can Solve Black-Box Combinatorial Optimization More Efficiently",
+        "authorNames": ["Kenshin Abe", "Yunzhuo Wang", "Shuhei Watanabe"],
+        "firstAuthors": ["Kenshin Abe"],
+        "venueName": "arXiv:2507.08053",
+        "venueType": "Preprint",
+        "publishedMonth": 7,
+        "publishedYear": 2025,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2507.08053",
+            "code": "https://github.com/nabenabe0928/optuna/tree/freeze/metric-tpe-experiments/"
+        }
+    },
+    {
         "title": "Preference-Optimal Multi-Metric Weighting for Parallel Coordinate Plots",
         "authorNames": ["Chisa Mori", "Shuhei Watanabe", "Masaki Onishi", "Takayuki Itoh"],
         "firstAuthors": ["Chisa Mori", "Shuhei Watanabe"],
