@@ -28,6 +28,21 @@
         }
     },
     {
+        "title": "OptunaHub: A Platform for Black-Box Optimization",
+        "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Toshihiko Yanase"],
+        "firstAuthors": ["Yoshihiko Ozaki", "Shuhei Watanabe"],
+        "venueName": "arXiv:2507.08053",
+        "venueType": "Preprint",
+        "isForthcoming": false,
+        "publishedMonth": 10,
+        "publishedYear": 2025,
+        "isJapaneseOnly": false,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2510.02798",
+            "code": "https://hub.optuna.org/"
+        }
+    },
+    {
         "title": "Tree-Structured Parzen Estimator Can Solve Black-Box Combinatorial Optimization More Efficiently",
         "authorNames": ["Kenshin Abe", "Yunzhuo Wang", "Shuhei Watanabe"],
         "firstAuthors": ["Kenshin Abe"],
