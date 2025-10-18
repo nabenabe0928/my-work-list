@@ -28,6 +28,19 @@
         }
     },
     {
+        "title": "Future Directions of AutoML from the Optuna View",
+        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
+        "firstAuthors": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
+        "venueName": "NII Shonan Meeting (Advancing Automated Machine Learning)",
+        "venueType": "Talk",
+        "isOralPresentation": true,
+        "publishedMonth": 10,
+        "publishedYear": 2025,
+        "urls": {
+            "paper": "https://shonan.nii.ac.jp/seminars/223/"
+        }
+    },
+    {
         "title": "OptunaHub: A Platform for Black-Box Optimization",
         "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Toshihiko Yanase"],
         "firstAuthors": ["Yoshihiko Ozaki", "Shuhei Watanabe"],
