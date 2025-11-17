@@ -28,6 +28,22 @@
         }
     },
     {
+        "title": "Batch Acquisition Function Evaluations and Decouple Optimizer Updates for Faster Bayesian Optimization",
+        "authorNames": ["Kaichi Irie", "Shuhei Watanabe", "Masaki Onishi"],
+        "firstAuthors": ["Kaichi Irie"],
+        "venueName": "Workshop on AI to Accelerate Science and Engineering at AAAI",
+        "venueNameAbbreviation": "AI2ASE",
+        "venueType": "Workshop",
+        "isOralPresentation": true,
+        "isForthcoming": true,
+        "publishedMonth": 1,
+        "publishedYear": 2026,
+        "urls": {
+            "paper": "https://ai-2-ase.github.io/",
+            "code": "https://github.com/Kaichi-Irie/aaai2026-anon-exp/tree/submission"
+        }
+    },
+    {
         "title": "Future Directions of AutoML from the Optuna View",
         "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
         "firstAuthors": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
@@ -49,7 +65,6 @@
         "isForthcoming": false,
         "publishedMonth": 10,
         "publishedYear": 2025,
-        "isJapaneseOnly": false,
         "urls": {
             "arxiv": "https://arxiv.org/abs/2510.02798",
             "code": "https://hub.optuna.org/"
@@ -92,10 +107,8 @@
         "venueNameAbbreviation": "PED",
         "venueType": "Conference",
         "isOralPresentation": false,
-        "isForthcoming": true,
         "publishedMonth": 9,
         "publishedYear": 2025,
-        "isJapaneseOnly": false,
         "urls": {
             "paper": "https://www.ped25.cz/"
         }
