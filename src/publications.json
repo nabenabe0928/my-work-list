@@ -39,6 +39,7 @@
         "publishedMonth": 1,
         "publishedYear": 2026,
         "urls": {
+            "arxiv": "https://arxiv.org/abs/2511.13625",
             "paper": "https://ai-2-ase.github.io/",
             "code": "https://github.com/Kaichi-Irie/aaai2026-anon-exp/tree/submission"
         }
