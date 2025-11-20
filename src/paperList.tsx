@@ -70,7 +70,7 @@ const PaperListPage = () => {
     <>
       <h1>Research Experiences</h1>
       <p>
-        Here, I listed the referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
+        This page lists referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
         represents the equal contribution.
       </p>
       <p>

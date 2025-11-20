@@ -5,7 +5,7 @@
         "firstAuthors": ["Shuhei Watanabe"],
         "venueName": "AAAI Conference on Artificial Intelligence",
         "venueNameAbbreviation": "AAAI",
-        "venueType": "Conference or Workshop or Journal or Preprint or Thesis or Talk",
+        "venueType": "Conference or Workshop or Journal or Preprint or Thesis or Talk or Notebook",
         "isOralPresentation": false,
         "submissionCount": 10000,
         "acceptanceCount": 1000,
@@ -474,7 +474,7 @@
         "title": "Significant Runtime Reduction for Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
         "authorNames": ["Shuhei Watanabe"],
         "firstAuthors": ["Shuhei Watanabe"],
-        "venueName": "Master thesis at the University of Freiburg",
+        "venueName": "Master thesis at University of Freiburg",
         "venueType": "Thesis",
         "publishedMonth": 10,
         "publishedYear": 2023,
@@ -508,6 +508,84 @@
         "urls": {
             "arxiv": "https://arxiv.org/abs/2305.08852",
             "code": "https://github.com/nabenabe0928/empirical-attainment-func"
+        }
+    },
+    {
+        "title": "Machine Learning Course Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/machine-learning.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/machine-learning.pdf"
+        }
+    },
+    {
+        "title": "Deep Learning Course Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/deep-learning.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/deep-learning.pdf"
+        }
+    },
+    {
+        "title": "Reinforcement Learning Course Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/reinforcement-learning.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/reinforcement-learning.pdf"
+        }
+    },
+    {
+        "title": "Statistical Pattern Recognition Course Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2022,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/statistical-pattern-recognition.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/statistical-pattern-recognition.pdf"
+        }
+    },
+    {
+        "title": "Simulation in Computer Graphics Course Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/simulation-cg.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/simulation-cg.pdf"
+        }
+    },
+    {
+        "title": "High Performance Computing with Python Course Final Report",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "University of Freiburg",
+        "venueType": "Notebook",
+        "publishedMonth": 9,
+        "publishedYear": 2021,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/high-performance-computing-with-python.pdf",
+            "pdf": "https://nabenabe0928.github.io/medium/high-performance-computing-with-python.pdf"
         }
     }
 ]

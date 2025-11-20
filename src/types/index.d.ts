@@ -17,7 +17,7 @@ type PaperInfo = {
   firstAuthors: string[]
   venueName: string
   venueNameAbbreviation?: string
-  venueType: "Conference" | "Workshop" | "Journal" | "Preprint" | "Thesis" | "Talk"
+  venueType: "Conference" | "Workshop" | "Journal" | "Preprint" | "Thesis" | "Talk" | "Notebook"
   isOralPresentation?: boolean
   awardInfo?: string
   isJapaneseOnly?: boolean
