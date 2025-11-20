@@ -519,8 +519,7 @@
         "publishedMonth": 3,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/machine-learning.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/machine-learning.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/machine-learning.pdf"
         }
     },
     {
@@ -532,8 +531,7 @@
         "publishedMonth": 3,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/deep-learning.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/deep-learning.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/deep-learning.pdf"
         }
     },
     {
@@ -545,8 +543,7 @@
         "publishedMonth": 3,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/reinforcement-learning.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/reinforcement-learning.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/reinforcement-learning.pdf"
         }
     },
     {
@@ -558,8 +555,7 @@
         "publishedMonth": 3,
         "publishedYear": 2022,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/statistical-pattern-recognition.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/statistical-pattern-recognition.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/statistical-pattern-recognition.pdf"
         }
     },
     {
@@ -571,8 +567,7 @@
         "publishedMonth": 3,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/simulation-cg.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/simulation-cg.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/simulation-cg.pdf"
         }
     },
     {
@@ -584,8 +579,7 @@
         "publishedMonth": 9,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://nabenabe0928.github.io/medium/high-performance-computing-with-python.pdf",
-            "pdf": "https://nabenabe0928.github.io/medium/high-performance-computing-with-python.pdf"
+            "paper": "https://nabenabe0928.github.io/medium/high-performance-computing-with-python.pdf"
         }
     }
 ]
