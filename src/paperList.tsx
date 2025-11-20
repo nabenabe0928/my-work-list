@@ -158,6 +158,11 @@ const PaperListPage = () => {
           {" Year"}
         </MenuItem>
       </Menu>
+      <Button 
+        onClick={() => {setTickedMenus(new Array(tickedMenus.length).fill(false))}}
+      >
+        Unselect All
+      </Button>
       {paperInfo.length === 0 ? (<><p>{noSearchFoundComment}</p></>) : groupBy === "venueType" ? (
         <>
           {venueTypesToInclude.map((venueType) => {
