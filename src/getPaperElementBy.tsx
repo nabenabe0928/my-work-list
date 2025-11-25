@@ -30,19 +30,23 @@ const getPaperItem = (paper: PaperInfo) => {
     )
   })
   const urls = paper.urls
-  const japaneseOnlyPrefix = <><b>[Japanese Only] </b></>
+  const japaneseOnlyPrefix = (
+    <>
+      <b>[Japanese Only] </b>
+    </>
+  )
   const titleContent = (
     <>
-    <>{paper.isJapaneseOnly ? japaneseOnlyPrefix : null}</>
-    <>{
-      urls.paper ? (
-        <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
-        {paper.title}
-        </a>        
-      ) : (
-        <span style={styles.paperTitle}>{paper.title}</span>
-      )
-    }</>
+      <>{paper.isJapaneseOnly ? japaneseOnlyPrefix : null}</>
+      <>
+        {urls.paper ? (
+          <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
+            {paper.title}
+          </a>
+        ) : (
+          <span style={styles.paperTitle}>{paper.title}</span>
+        )}
+      </>
     </>
   )
 
@@ -128,7 +132,10 @@ const getPaperItem = (paper: PaperInfo) => {
         <div style={{ marginBottom: "0.4em" }}>{titleContent}</div>
         <div style={{ marginBottom: "0.2em" }}>{displayNameEl}</div>
         <div style={styles.venueType}>
-          {paper.venueName}{` (${venueInfo})`}{paper.isForthcoming ? " (Forthcoming)" : null}. {paper.isOralPresentation ? "Oral Presentation." : null}
+          {paper.venueName}
+          {` (${venueInfo})`}
+          {paper.isForthcoming ? " (Forthcoming)" : null}.{" "}
+          {paper.isOralPresentation ? "Oral Presentation." : null}
         </div>
         {paper.awardInfo ? (
           <>

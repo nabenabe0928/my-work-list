@@ -70,8 +70,8 @@ const PaperListPage = () => {
     <>
       <h1>Research Experiences</h1>
       <p>
-        This page lists referred papers. <span style={{ color: "red" }}>&clubs;</span>{" "}
-        represents the equal contribution.
+        This page lists referred papers. <span style={{ color: "red" }}>&clubs;</span> represents
+        the equal contribution.
       </p>
       <p>
         <b>NOTE</b>: I strongly recommend to read the arXiv version (if available) as I update
@@ -158,12 +158,28 @@ const PaperListPage = () => {
           {" Year"}
         </MenuItem>
       </Menu>
-      <Button 
-        onClick={() => {setTickedMenus(new Array(tickedMenus.length).fill(false))}}
+      <Button
+        onClick={() => {
+          setTickedMenus([
+            ...Array(numVenueTypes).fill(true),
+            ...Array(additionalFilterChoices.length).fill(false),
+          ])
+        }}
+      >
+        Select All
+      </Button>
+      <Button
+        onClick={() => {
+          setTickedMenus(new Array(tickedMenus.length).fill(false))
+        }}
       >
         Unselect All
       </Button>
-      {paperInfo.length === 0 ? (<><p>{noSearchFoundComment}</p></>) : groupBy === "venueType" ? (
+      {paperInfo.length === 0 ? (
+        <>
+          <p>{noSearchFoundComment}</p>
+        </>
+      ) : groupBy === "venueType" ? (
         <>
           {venueTypesToInclude.map((venueType) => {
             return (
