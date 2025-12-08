@@ -28,6 +28,18 @@
         }
     },
     {
+        "title": "Approximation of Box Decomposition Algorithm for Fast Hypervolume-Based Multi-Objective Optimization",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "arXiv:2512.05825",
+        "venueType": "Preprint",
+        "publishedMonth": 12,
+        "publishedYear": 2025,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2512.05825"
+        }
+    },
+    {
         "title": "Batch Acquisition Function Evaluations and Decouple Optimizer Updates for Faster Bayesian Optimization",
         "authorNames": ["Kaichi Irie", "Shuhei Watanabe", "Masaki Onishi"],
         "firstAuthors": ["Kaichi Irie"],
