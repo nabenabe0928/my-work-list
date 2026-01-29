@@ -28,6 +28,18 @@
         }
     },
     {
+        "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
+        "authorNames": ["Kaito Baba", "Yoshihiko Ozaki", "Shuhei Watanabe"],
+        "firstAuthors": ["Kaito Baba"],
+        "venueName": "arXiv:2601.20800",
+        "venueType": "Preprint",
+        "publishedMonth": 1,
+        "publishedYear": 2026,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2601.20800"
+        }
+    },
+    {
         "title": "Approximation of Box Decomposition Algorithm for Fast Hypervolume-Based Multi-Objective Optimization",
         "authorNames": ["Shuhei Watanabe"],
         "firstAuthors": ["Shuhei Watanabe"],
