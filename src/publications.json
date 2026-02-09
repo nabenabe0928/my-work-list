@@ -298,7 +298,7 @@
         "publishedMonth": 1,
         "publishedYear": 2021,
         "urls": {
-            "paper": "https://ojs.aaai.org/index.php/AAAI/article/view/17109/16916",
+            "paper": "https://aaai.org/papers/09188-warm-starting-cma-es-for-hyperparameter-optimization/",
             "arxiv": "https://arxiv.org/abs/2012.06932"
         }
     },
