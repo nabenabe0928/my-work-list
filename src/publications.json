@@ -28,6 +28,18 @@
         }
     },
     {
+        "title": "Measure Theory (Compact) Notebook",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Self Learning",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2026,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/measure-theory.pdf"
+        }
+    },
+    {
         "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
         "authorNames": ["Kaito Baba", "Yoshihiko Ozaki", "Shuhei Watanabe"],
         "firstAuthors": ["Kaito Baba"],
