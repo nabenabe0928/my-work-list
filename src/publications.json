@@ -1,8 +1,13 @@
 [
     {
         "title": "example",
-        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "AAAI Conference on Artificial Intelligence",
         "venueNameAbbreviation": "AAAI",
         "venueType": "Conference or Workshop or Journal or Preprint or Thesis or Talk or Notebook",
@@ -28,9 +33,29 @@
         }
     },
     {
+        "title": "Robot Dynamics Notebook",
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
+        "venueName": "Self Learning (Based on Robot Dynamics Lecture Notebook by Prof. Marco Hutter)",
+        "venueType": "Notebook",
+        "publishedMonth": 3,
+        "publishedYear": 2026,
+        "urls": {
+            "paper": "https://nabenabe0928.github.io/medium/robot-dynamics.pdf"
+        }
+    },
+    {
         "title": "Measure Theory (Compact) Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Self Learning",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -41,8 +66,14 @@
     },
     {
         "title": "Conditional PED-ANOVA: Hyperparameter Importance in Hierarchical & Dynamic Search Spaces",
-        "authorNames": ["Kaito Baba", "Yoshihiko Ozaki", "Shuhei Watanabe"],
-        "firstAuthors": ["Kaito Baba"],
+        "authorNames": [
+            "Kaito Baba",
+            "Yoshihiko Ozaki",
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Kaito Baba"
+        ],
         "venueName": "arXiv:2601.20800",
         "venueType": "Preprint",
         "publishedMonth": 1,
@@ -53,8 +84,12 @@
     },
     {
         "title": "Approximation of Box Decomposition Algorithm for Fast Hypervolume-Based Multi-Objective Optimization",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2512.05825",
         "venueType": "Preprint",
         "publishedMonth": 12,
@@ -65,8 +100,14 @@
     },
     {
         "title": "Batch Acquisition Function Evaluations and Decouple Optimizer Updates for Faster Bayesian Optimization",
-        "authorNames": ["Kaichi Irie", "Shuhei Watanabe", "Masaki Onishi"],
-        "firstAuthors": ["Kaichi Irie"],
+        "authorNames": [
+            "Kaichi Irie",
+            "Shuhei Watanabe",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Kaichi Irie"
+        ],
         "venueName": "Workshop on AI to Accelerate Science and Engineering at AAAI",
         "venueNameAbbreviation": "AI2ASE",
         "venueType": "Workshop",
@@ -82,8 +123,14 @@
     },
     {
         "title": "Future Directions of AutoML from the Optuna View",
-        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
-        "firstAuthors": ["Shuhei Watanabe", "Yoshihiko Ozaki"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Yoshihiko Ozaki"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe",
+            "Yoshihiko Ozaki"
+        ],
         "venueName": "NII Shonan Meeting (Advancing Automated Machine Learning)",
         "venueType": "Talk",
         "isOralPresentation": true,
@@ -95,8 +142,15 @@
     },
     {
         "title": "OptunaHub: A Platform for Black-Box Optimization",
-        "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Toshihiko Yanase"],
-        "firstAuthors": ["Yoshihiko Ozaki", "Shuhei Watanabe"],
+        "authorNames": [
+            "Yoshihiko Ozaki",
+            "Shuhei Watanabe",
+            "Toshihiko Yanase"
+        ],
+        "firstAuthors": [
+            "Yoshihiko Ozaki",
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2507.08053",
         "venueType": "Preprint",
         "isForthcoming": false,
@@ -109,8 +163,14 @@
     },
     {
         "title": "Tree-Structured Parzen Estimator Can Solve Black-Box Combinatorial Optimization More Efficiently",
-        "authorNames": ["Kenshin Abe", "Yunzhuo Wang", "Shuhei Watanabe"],
-        "firstAuthors": ["Kenshin Abe"],
+        "authorNames": [
+            "Kenshin Abe",
+            "Yunzhuo Wang",
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Kenshin Abe"
+        ],
         "venueName": "arXiv:2507.08053",
         "venueType": "Preprint",
         "publishedMonth": 7,
@@ -122,8 +182,16 @@
     },
     {
         "title": "Preference-Optimal Multi-Metric Weighting for Parallel Coordinate Plots",
-        "authorNames": ["Chisa Mori", "Shuhei Watanabe", "Masaki Onishi", "Takayuki Itoh"],
-        "firstAuthors": ["Chisa Mori", "Shuhei Watanabe"],
+        "authorNames": [
+            "Chisa Mori",
+            "Shuhei Watanabe",
+            "Masaki Onishi",
+            "Takayuki Itoh"
+        ],
+        "firstAuthors": [
+            "Chisa Mori",
+            "Shuhei Watanabe"
+        ],
         "venueName": "International Conference Information Visualisation",
         "venueNameAbbreviation": "iV",
         "venueType": "Conference",
@@ -138,8 +206,15 @@
     },
     {
         "title": "User Preference-Based Parallel Coordinate Plots: Its Application in Guidance Planning",
-        "authorNames": ["Chisa Mori", "Shuhei Watanabe", "Masaki Onishi", "Takayuki Itoh"],
-        "firstAuthors": ["Chisa Mori"],
+        "authorNames": [
+            "Chisa Mori",
+            "Shuhei Watanabe",
+            "Masaki Onishi",
+            "Takayuki Itoh"
+        ],
+        "firstAuthors": [
+            "Chisa Mori"
+        ],
         "venueName": "International Conference on Pedestrian and Evacuation Dynamics",
         "venueNameAbbreviation": "PED",
         "venueType": "Conference",
@@ -152,8 +227,12 @@
     },
     {
         "title": "Derivation of Output Correlation Inferences for Multi-Output (aka Multi-Task) Gaussian Process",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2501.07964",
         "venueType": "Preprint",
         "publishedMonth": 1,
@@ -164,8 +243,12 @@
     },
     {
         "title": "Derivation of Closed Form of Expected Improvement for Gaussian Process Trained on Log-Transformed Objective",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2411.18095",
         "venueType": "Preprint",
         "publishedMonth": 11,
@@ -176,8 +259,17 @@
     },
     {
         "title": "Multi-Objective Bayesian Optimization for Materials Discovery with Neural Network Potential -- An Application to Li-Ion Battery Cathode Material",
-        "authorNames": ["Shuhei Watanabe", "Hideaki Imamura", "Chikashi Shinagawa", "Kohei Shinohara", "So Takamoto", "Ju Li"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Hideaki Imamura",
+            "Chikashi Shinagawa",
+            "Kohei Shinohara",
+            "So Takamoto",
+            "Ju Li"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Materials Research Society Fall Meeting & Exhibit",
         "venueNameAbbreviation": "MRS Fall ",
         "venueType": "Talk",
@@ -189,8 +281,16 @@
     },
     {
         "title": "MAS-Bench: A Benchmarking for Parameter Calibration of Multi-Agent Crowd Simulation",
-        "authorNames": ["Shusuke Shigenaka", "Shunki Takami", "Shuhei Watanabe", "Yuki Tanigaki", "Masaki Onishi"],
-        "firstAuthors": ["Shusuke Shigenaka"],
+        "authorNames": [
+            "Shusuke Shigenaka",
+            "Shunki Takami",
+            "Shuhei Watanabe",
+            "Yuki Tanigaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shusuke Shigenaka"
+        ],
         "venueName": "Journal of Computational Social Science",
         "venueNameAbbreviation": "JCSS",
         "venueType": "Journal",
@@ -203,8 +303,15 @@
     },
     {
         "title": "Fast Benchmarking of Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
-        "authorNames": ["Shuhei Watanabe", "Neeratyoy Mallik", "Edward Bergman", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Neeratyoy Mallik",
+            "Edward Bergman",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "AutoML Conference",
         "venueNameAbbreviation": "AutoML",
         "venueType": "Conference",
@@ -224,8 +331,13 @@
     },
     {
         "title": "c-TPE: Tree-Structured Parzen Estimator with Inequality Constraints for Expensive Hyperparameter Optimization",
-        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "International Joint Conference on Artificial Intelligence",
         "venueNameAbbreviation": "IJCAI",
         "venueType": "Conference",
@@ -244,8 +356,15 @@
     },
     {
         "title": "Speeding Up Multi-Objective Hyperparameter Optimization by Task Similarity-Based Meta-Learning for the Tree-Structured Parzen Estimator",
-        "authorNames": ["Shuhei Watanabe", "Noor Awad", "Masaki Onishi", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Noor Awad",
+            "Masaki Onishi",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "International Joint Conference on Artificial Intelligence",
         "venueNameAbbreviation": "IJCAI",
         "venueType": "Conference",
@@ -264,8 +383,14 @@
     },
     {
         "title": "PED-ANOVA: Efficiently Quantifying Hyperparameter Importance in Arbitrary Subspaces",
-        "authorNames": ["Shuhei Watanabe", "Archit Bansal", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Archit Bansal",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "International Joint Conference on Artificial Intelligence",
         "venueNameAbbreviation": "IJCAI",
         "venueType": "Conference",
@@ -284,8 +409,17 @@
     },
     {
         "title": "MAS-Bench: Parameter Optimization Benchmark for Multi-Agent Crowd Simulation",
-        "authorNames": ["Shusuke Shigenaka", "Shunki Takami", "Shuhei Watanabe", "Yuki Tanigaki", "Yoshihiko Ozaki", "Masaki Onishi"],
-        "firstAuthors": ["Shusuke Shigenaka"],
+        "authorNames": [
+            "Shusuke Shigenaka",
+            "Shunki Takami",
+            "Shuhei Watanabe",
+            "Yuki Tanigaki",
+            "Yoshihiko Ozaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shusuke Shigenaka"
+        ],
         "venueName": "International Conference on Autonomous Agents and MultiAgent Systems",
         "venueNameAbbreviation": "AAMAS",
         "venueType": "Conference",
@@ -300,8 +434,17 @@
     },
     {
         "title": "Warm Starting CMA-ES for Hyperparameter Optimization",
-        "authorNames": ["Masahiro Nomura", "Shuhei Watanabe", "Youhei Akimoto", "Yoshihiko Ozaki", "Masaki Onishi"],
-        "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
+        "authorNames": [
+            "Masahiro Nomura",
+            "Shuhei Watanabe",
+            "Youhei Akimoto",
+            "Yoshihiko Ozaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Masahiro Nomura",
+            "Shuhei Watanabe"
+        ],
         "venueName": "AAAI Conference on Artificial Intelligence",
         "venueNameAbbreviation": "AAAI",
         "venueType": "Conference",
@@ -316,8 +459,16 @@
     },
     {
         "title": "Evaluating Initialization of Nelder-Mead Method for Hyperparameter Optimization in Deep Learning",
-        "authorNames": ["Shintaro Takenaga", "Shuhei Watanabe", "Masahiro Nomura", "Yoshihiko Ozaki", "Masaki Onishi"],
-        "firstAuthors": ["Shintaro Takenaga"],
+        "authorNames": [
+            "Shintaro Takenaga",
+            "Shuhei Watanabe",
+            "Masahiro Nomura",
+            "Yoshihiko Ozaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shintaro Takenaga"
+        ],
         "venueName": "International Conference on Pattern Recognition",
         "venueNameAbbreviation": "ICPR",
         "venueType": "Conference",
@@ -330,8 +481,15 @@
     },
     {
         "title": "Multiobjective Tree-Structured Parzen Estimator for Computationally Expensive Optimization Problems",
-        "authorNames": ["Yoshihiko Ozaki", "Yuki Tanigaki", "Shuhei Watanabe", "Masaki Onishi"],
-        "firstAuthors": ["Yoshihiko Ozaki"],
+        "authorNames": [
+            "Yoshihiko Ozaki",
+            "Yuki Tanigaki",
+            "Shuhei Watanabe",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Yoshihiko Ozaki"
+        ],
         "venueName": "The Genetic and Evolutionary Computation Conference",
         "venueNameAbbreviation": "GECCO",
         "venueType": "Conference",
@@ -348,8 +506,15 @@
     },
     {
         "title": "Speeding up of the Nelder-Mead Method by Data-driven Speculative Execution",
-        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki", "Yoshiaki Bando", "Masaki Onishi"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Yoshihiko Ozaki",
+            "Yoshiaki Bando",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Asian Conference on Pattern Recognition",
         "venueNameAbbreviation": "ACPR",
         "venueType": "Conference",
@@ -366,8 +531,12 @@
     },
     {
         "title": "Python Wrapper for Simulating Multi-Fidelity Optimization on HPO Benchmarks without Any Wait",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "AutoML Conference Workshop Track",
         "venueNameAbbreviation": "AutoML",
         "venueType": "Workshop",
@@ -386,8 +555,13 @@
     },
     {
         "title": "c-TPE: Generalizing Tree-Structured Parzen Estimator with Inequality Constraints for Continuous and Categorical Hyperparameter Optimization",
-        "authorNames": ["Shuhei Watanabe", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Workshop on Gaussian Processes, Spatiotemporal Modeling, and Decision-making Systems at NeurIPS",
         "venueNameAbbreviation": "GPSMDM",
         "venueType": "Workshop",
@@ -403,8 +577,15 @@
     },
     {
         "title": "Multi-Objective Tree-Structured Parzen Estimator Meets Meta-learning",
-        "authorNames": ["Shuhei Watanabe", "Noor Awad", "Masaki Onishi", "Frank Hutter"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Noor Awad",
+            "Masaki Onishi",
+            "Frank Hutter"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Workshop on Meta-Learning at NeurIPS",
         "venueNameAbbreviation": "MetaLearn",
         "venueType": "Workshop",
@@ -420,8 +601,16 @@
     },
     {
         "title": "Warm Starting Method for CMA-ES",
-        "authorNames": ["Masahiro Nomura", "Shuhei Watanabe", "Yoshihiko Ozaki", "Masaki Onishi"],
-        "firstAuthors": ["Masahiro Nomura", "Shuhei Watanabe"],
+        "authorNames": [
+            "Masahiro Nomura",
+            "Shuhei Watanabe",
+            "Yoshihiko Ozaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Masahiro Nomura",
+            "Shuhei Watanabe"
+        ],
         "venueName": "Workshop on Meta-Learning at NeurIPS",
         "venueNameAbbreviation": "MetaLearn",
         "venueType": "Workshop",
@@ -435,8 +624,14 @@
     },
     {
         "title": "Accelerating the Nelder-Mead Method with Predictive Evaluation",
-        "authorNames": ["Yoshihiko Ozaki", "Shuhei Watanabe", "Masaki Onishi"],
-        "firstAuthors": ["Yoshihiko Ozaki"],
+        "authorNames": [
+            "Yoshihiko Ozaki",
+            "Shuhei Watanabe",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Yoshihiko Ozaki"
+        ],
         "venueName": "Workshop on Automated Machine Learning at ICML",
         "venueNameAbbreviation": "AutoML",
         "venueType": "Workshop",
@@ -450,8 +645,16 @@
     },
     {
         "title": "Multiobjective Tree-Structured Parzen Estimator",
-        "authorNames": ["Yoshihiko Ozaki", "Yuki Tanigaki", "Shuhei Watanabe", "Masahiro Nomura", "Masaki Onishi"],
-        "firstAuthors": ["Yoshihiko Ozaki"],
+        "authorNames": [
+            "Yoshihiko Ozaki",
+            "Yuki Tanigaki",
+            "Shuhei Watanabe",
+            "Masahiro Nomura",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Yoshihiko Ozaki"
+        ],
         "venueName": "Journal of Artificial Intelligence Research",
         "venueNameAbbreviation": "JAIR",
         "venueType": "Journal",
@@ -465,8 +668,12 @@
     },
     {
         "title": "Tree-Structured Parzen Estimator: Understanding Its Algorithm Components and Their Roles for Better Empirical Performance",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2304.11127",
         "venueType": "Preprint",
         "publishedMonth": 3,
@@ -478,8 +685,14 @@
     },
     {
         "title": "The Characteristics Required in Hyperparameter Optimization of Deep Learning Algorithms",
-        "authorNames": ["Shuhei Watanabe", "Masahiro Nomura", "Masaki Onishi"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Masahiro Nomura",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Japanese Society for Artificial Intelligence",
         "venueNameAbbreviation": "JSAI",
         "venueType": "Preprint",
@@ -492,8 +705,14 @@
     },
     {
         "title": "Speed Up of Hyperparameter Tuning with Nelder-Mead Method by Parallel Computing",
-        "authorNames": ["Shuhei Watanabe", "Yoshihiko Ozaki", "Masaki Onishi"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Yoshihiko Ozaki",
+            "Masaki Onishi"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Pattern Recognition and Media Understanding",
         "venueNameAbbreviation": "PRMU",
         "venueType": "Preprint",
@@ -508,8 +727,12 @@
     },
     {
         "title": "Significant Runtime Reduction for Asynchronous Multi-Fidelity Optimization on Zero-Cost Benchmarks",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Master thesis at University of Freiburg",
         "venueType": "Thesis",
         "publishedMonth": 10,
@@ -524,8 +747,12 @@
     },
     {
         "title": "A Study on the Spontaneously Emerged Cooperation in a Collective Game with AI Type Agents",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "Bachelor thesis at the University of Tokyo",
         "venueType": "Thesis",
         "publishedMonth": 3,
@@ -535,8 +762,12 @@
     },
     {
         "title": "Python Tool for Visualizing Variability of Pareto Fronts over Multiple Runs",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "arXiv:2305.08852",
         "venueType": "Preprint",
         "publishedMonth": 5,
@@ -548,8 +779,12 @@
     },
     {
         "title": "Machine Learning Course Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -560,8 +795,12 @@
     },
     {
         "title": "Deep Learning Course Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -572,8 +811,12 @@
     },
     {
         "title": "Reinforcement Learning Course Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -584,8 +827,12 @@
     },
     {
         "title": "Statistical Pattern Recognition Course Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -596,8 +843,12 @@
     },
     {
         "title": "Simulation in Computer Graphics Course Notebook",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 3,
@@ -608,8 +859,12 @@
     },
     {
         "title": "High Performance Computing with Python Course Final Report",
-        "authorNames": ["Shuhei Watanabe"],
-        "firstAuthors": ["Shuhei Watanabe"],
+        "authorNames": [
+            "Shuhei Watanabe"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
         "venueName": "University of Freiburg",
         "venueType": "Notebook",
         "publishedMonth": 9,
