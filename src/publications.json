@@ -70,6 +70,7 @@
         ],
         "venueName": "Self Learning",
         "venueType": "Notebook",
+        "awardInfo": "Primarily used for Meta-Learning TPE published at IJCAI'23.",
         "publishedMonth": 3,
         "publishedYear": 2026,
         "urls": {
