@@ -5,7 +5,7 @@ import CheckBoxIcon from "@mui/icons-material/CheckBox"
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
-import { myName } from "./constantValues"
+import { myName, availableVenueTypes } from "./constantValues"
 import PaperElementBy from "./getPaperElementBy"
 
 const additionalFilterChoices = ["First Author Papers", "Remove Japanese Papers"]
@@ -13,9 +13,12 @@ const additionalFilterChoices = ["First Author Papers", "Remove Japanese Papers"
 const PaperListPage = () => {
   const getVenueChoices = (paperInfo: PaperInfo[]) => {
     const venueTypes = paperInfo.map((paper) => paper.venueType)
-    const filterChoices = venueTypes
-      .filter((venueType, i) => venueTypes.indexOf(venueType) === i)
-      .sort()
+    const foundVenueTypes = venueTypes.filter(
+      (venueType, i) => venueTypes.indexOf(venueType) === i
+    )
+    const filterChoices = availableVenueTypes.filter((venueType) =>
+      foundVenueTypes.includes(venueType)
+    )
     return [...filterChoices, ...additionalFilterChoices]
   }
   const filterChoices = getVenueChoices(fetchPaperInfo())

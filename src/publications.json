@@ -33,6 +33,17 @@
         }
     },
     {
+        "title": "LLM Meets Optuna: Potential, Challenges, and Lessons",
+        "authorNames": ["Shuhei Watanabe"],
+        "firstAuthors": ["Shuhei Watanabe"],
+        "venueName": "Meta Adaptive Experimentation Workshop",
+        "venueType": "Talk",
+        "isOralPresentation": true,
+        "publishedMonth": 3,
+        "publishedYear": 2026,
+        "urls": {}
+    },
+    {
         "title": "Robot Dynamics Notebook",
         "authorNames": [
             "Shuhei Watanabe"

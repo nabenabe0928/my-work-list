@@ -11,13 +11,14 @@ type MaterialURLs = {
   shortVideoTranscript?: string
 }
 
+type VenueType = "Conference" | "Workshop" | "Journal" | "Preprint" | "Thesis" | "Talk" | "Notebook"
 type PaperInfo = {
   title: string
   authorNames: string[]
   firstAuthors: string[]
   venueName: string
   venueNameAbbreviation?: string
-  venueType: "Conference" | "Workshop" | "Journal" | "Preprint" | "Thesis" | "Talk" | "Notebook"
+  venueType: VenueType
   isOralPresentation?: boolean
   awardInfo?: string
   isJapaneseOnly?: boolean
