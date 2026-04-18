@@ -39,7 +39,7 @@
         "venueName": "Meta Adaptive Experimentation Workshop",
         "venueType": "Talk",
         "isOralPresentation": true,
-        "awardInfo": "Invited Only Workshop Held by Meta Platforms, Inc. (formerly Facebook, Inc.)",
+        "awardInfo": "By-Invitation-Only Workshop Held by Meta Platforms, Inc. (formerly Facebook, Inc.)",
         "publishedMonth": 3,
         "publishedYear": 2026,
         "urls": {
@@ -147,7 +147,7 @@
         ],
         "venueName": "NII Shonan Meeting (Advancing Automated Machine Learning)",
         "venueType": "Talk",
-        "awardInfo": "Invited Only Meeting.",
+        "awardInfo": "By-Invitation-Only Meeting.",
         "isOralPresentation": true,
         "publishedMonth": 10,
         "publishedYear": 2025,
