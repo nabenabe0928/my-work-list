@@ -89,9 +89,11 @@
         "firstAuthors": [
             "Kaito Baba"
         ],
-        "venueName": "arXiv:2601.20800",
-        "venueType": "Preprint",
-        "publishedMonth": 1,
+        "isForthcoming": true,
+        "venueName": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+        "venueNameAbbreviation": "KDD",
+        "venueType": "Conference",
+        "publishedMonth": 8,
         "publishedYear": 2026,
         "urls": {
             "arxiv": "https://arxiv.org/abs/2601.20800"
