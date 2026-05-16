@@ -96,7 +96,8 @@
         "publishedMonth": 8,
         "publishedYear": 2026,
         "urls": {
-            "arxiv": "https://arxiv.org/abs/2601.20800"
+            "arxiv": "https://arxiv.org/abs/2601.20800",
+            "code": "https://github.com/kAIto47802/condPED-ANOVA"
         }
     },
     {
