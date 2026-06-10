@@ -33,6 +33,23 @@
         }
     },
     {
+        "title": "Optuna Constrained Tree-Structured Parzen Estimator Is a Joint Density Generalization of c-TPE",
+        "authorNames": [
+            "Shuhei Watanabe",
+            "Kaichi Irie"
+        ],
+        "firstAuthors": [
+            "Shuhei Watanabe"
+        ],
+        "venueName": "arXiv:2606.09889",
+        "venueType": "Preprint",
+        "publishedMonth": 6,
+        "publishedYear": 2026,
+        "urls": {
+            "arxiv": "https://arxiv.org/abs/2606.09889"
+        }
+    },
+    {
         "title": "LLM Meets Optuna: Potential, Challenges, and Lessons",
         "authorNames": ["Shuhei Watanabe"],
         "firstAuthors": ["Shuhei Watanabe"],
