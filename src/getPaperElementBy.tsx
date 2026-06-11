@@ -1,5 +1,15 @@
 import { myName } from "./constantValues"
 
+const trackClick = (paperTitle: string, linkType: string, url: string) => {
+  if (typeof window.gtag === "function") {
+    window.gtag("event", "publication_click", {
+      paper_title: paperTitle,
+      link_type: linkType,
+      link_url: url,
+    })
+  }
+}
+
 const styles = {
   paperTitle: {
     marginBottom: "0.0em",
@@ -40,7 +50,13 @@ const getPaperItem = (paper: PaperInfo) => {
       <>{paper.isJapaneseOnly ? japaneseOnlyPrefix : null}</>
       <>
         {urls.paper ? (
-          <a href={urls.paper} target="_blank" style={styles.paperTitle} key={paper.title}>
+          <a
+            href={urls.paper}
+            target="_blank"
+            style={styles.paperTitle}
+            key={paper.title}
+            onClick={() => trackClick(paper.title, "paper", urls.paper as string)}
+          >
             {paper.title}
           </a>
         ) : (
@@ -54,7 +70,12 @@ const getPaperItem = (paper: PaperInfo) => {
     const sourceInfo = []
     const getSourceContent = (urls: string[], srcNames: string[]) => {
       const elements = urls.map((url, i) => (
-        <a href={url} target="_blank" key={`${srcNames[i]}-${paper.title}`}>
+        <a
+          href={url}
+          target="_blank"
+          key={`${srcNames[i]}-${paper.title}`}
+          onClick={() => trackClick(paper.title, srcNames[i], url)}
+        >
           {srcNames[i]}
         </a>
       ))

@@ -1,3 +1,7 @@
+interface Window {
+  gtag: (...args: any[]) => void
+}
+
 type MaterialURLs = {
   paper?: string
   arxiv?: string
