@@ -17,19 +17,17 @@
   <link rel="stylesheet" href="https://nabenabe0928.github.io/css/bootstrap-social.css">
   <link rel="stylesheet" href="https://nabenabe0928.github.io/css/font-awesome.css">
   <link rel="stylesheet" href="https://nabenabe0928.github.io/css/my-style.css">
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    $(function () {
-      $("#header").load("https://nabenabe0928.github.io/template/header.html");
-      // $("#footer").load("https://nabenabe0928.github.io/template/footer.html");
-    });
-  </script>
 </head>
 
 <body class="d-flex flex-column" style="min-height: 100vh">
-  <div id="header"></div>
+  <header id="header">
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container d-flex justify-content-start">
+        <a class="navbar-brand text-white" style="font-size: 1.5rem;" href="https://nabenabe0928.github.io/index.html">Home</a>
+        <a class="navbar-brand text-white" style="font-size: 1.5rem;" href="https://nabenabe0928.github.io/my-work-list/">Publications</a>
+      </div>
+    </nav>
+  </header>
   <div id="root" style="margin-top: 1.5em;"></div>
 </body>
 
