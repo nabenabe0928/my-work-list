@@ -186,10 +186,12 @@
             "Yoshihiko Ozaki",
             "Shuhei Watanabe"
         ],
-        "venueName": "arXiv:2507.08053",
-        "venueType": "Preprint",
-        "publishedMonth": 10,
-        "publishedYear": 2025,
+        "venueName": "Journal of Machine Learning Research",
+        "venueNameAbbreviation": "JMLR",
+        "isForthcoming": true,
+        "venueType": "Journal",
+        "publishedMonth": 8,
+        "publishedYear": 2026,
         "urls": {
             "arxiv": "https://arxiv.org/abs/2510.02798",
             "code": "https://hub.optuna.org/"
