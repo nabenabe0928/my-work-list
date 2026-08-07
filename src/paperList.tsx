@@ -1,7 +1,10 @@
-import { Button, IconButton, ListItemIcon, Menu, MenuItem, TableSortLabel } from "@mui/material"
+import { Box, Button, Divider, ListItemIcon, Menu, MenuItem, TableSortLabel } from "@mui/material"
 import CheckBoxOutlineBlankIcon from "@mui/icons-material/CheckBoxOutlineBlank"
 import FilterListIcon from "@mui/icons-material/FilterList"
 import CheckBoxIcon from "@mui/icons-material/CheckBox"
+import SortIcon from "@mui/icons-material/Sort"
+import DoneAllIcon from "@mui/icons-material/DoneAll"
+import ClearAllIcon from "@mui/icons-material/ClearAll"
 import React from "react"
 import { Container, Row, Col } from "react-bootstrap"
 import fetchPaperInfo from "./fetchPublications"
@@ -9,6 +12,49 @@ import { myName, availableVenueTypes } from "./constantValues"
 import PaperElementBy from "./getPaperElementBy"
 
 const additionalFilterChoices = ["First Author Papers", "Remove Japanese Papers"]
+
+const styles = {
+  toolbar: {
+    display: "flex",
+    flexWrap: "wrap" as const,
+    alignItems: "center",
+    gap: "0.25em",
+    marginTop: "0.75em",
+    marginBottom: "1.25em",
+    padding: "0.3em 0.5em",
+    backgroundColor: "#fafafa",
+    border: "1px solid #e8e8e8",
+    borderRadius: "8px",
+  },
+  toolbarGroup: {
+    display: "flex",
+    alignItems: "center",
+    gap: "0.25em",
+  },
+  toolbarSpacer: {
+    marginLeft: "auto",
+  },
+  toolbarDivider: {
+    height: "1.4em",
+    marginX: "0.4em",
+    borderColor: "#dddddd",
+  },
+  toolbarButton: {
+    textTransform: "none" as const,
+    color: "#444444",
+    fontWeight: 500,
+    fontSize: "0.85rem",
+    borderRadius: "6px",
+    paddingLeft: "0.75em",
+    paddingRight: "0.75em",
+    "&:hover": {
+      backgroundColor: "rgba(0, 0, 0, 0.06)",
+    },
+  },
+  toolbarIcon: {
+    color: "#888888",
+  },
+}
 
 const PaperListPage = () => {
   const getVenueChoices = (paperInfo: PaperInfo[]) => {
@@ -88,96 +134,108 @@ const PaperListPage = () => {
           setYearOrderByDescending(newYearOrderByDescending)
         }}
       >{`Showing ${yearOrderByDescending ? "latest" : "oldest"} first`}</TableSortLabel>
-      <IconButton
-        size={"large"}
-        onClick={(e) => {
-          setFilterMenuAnchorEl(e.currentTarget)
-        }}
-      >
-        <FilterListIcon fontSize="large" />
-      </IconButton>
-      <Menu
-        anchorEl={filterMenuAnchorEl}
-        open={filterMenuAnchorEl !== null}
-        onClose={() => {
-          setFilterMenuAnchorEl(null)
-        }}
-      >
-        {filterChoices.map((choice, i) => {
-          return (
-            <div key={choice}>
-              <MenuItem
-                key={choice}
-                onClick={() => {
-                  const newTickedMenus = [...tickedMenus]
-                  newTickedMenus[i] = !tickedMenus[i]
-                  setTickedMenus(newTickedMenus)
-                }}
-              >
-                <ListItemIcon>
-                  {tickedMenus[i] ? (
-                    <CheckBoxIcon color="primary" />
-                  ) : (
-                    <CheckBoxOutlineBlankIcon color="primary" />
-                  )}
-                </ListItemIcon>
-                {choice}
-              </MenuItem>
-            </div>
-          )
-        })}
-      </Menu>
-      <Button
-        aria-controls="group-by-menu"
-        aria-haspopup="true"
-        onClick={(e) => {
-          setGroupByMenuAnchorEl(e.currentTarget)
-        }}
-      >
-        Group By
-      </Button>
-      <Menu
-        id="group-by-menu"
-        anchorEl={groupByMenuAnchorEl}
-        open={Boolean(groupByMenuAnchorEl)}
-        onClose={() => setGroupByMenuAnchorEl(null)}
-      >
-        <MenuItem
-          onClick={() => {
-            setGroupByMenuAnchorEl(null)
-            setGroupBy("venueType")
+      <Box sx={styles.toolbar}>
+        <Button
+          sx={styles.toolbarButton}
+          startIcon={<FilterListIcon fontSize="small" sx={styles.toolbarIcon} />}
+          onClick={(e) => {
+            setFilterMenuAnchorEl(e.currentTarget)
           }}
         >
-          {groupBy === "venueType" ? tickMark : hSpace}
-          {" Venue Type"}
-        </MenuItem>
-        <MenuItem
-          onClick={() => {
-            setGroupByMenuAnchorEl(null)
-            setGroupBy("year")
+          Filter
+        </Button>
+        <Menu
+          anchorEl={filterMenuAnchorEl}
+          open={filterMenuAnchorEl !== null}
+          onClose={() => {
+            setFilterMenuAnchorEl(null)
           }}
         >
-          {groupBy === "year" ? tickMark : hSpace}
-          {" Year"}
-        </MenuItem>
-      </Menu>
-      <Button
-        onClick={() => {
-          setTickedMenus([
-            ...Array(numVenueTypes).fill(true),
-            ...Array(additionalFilterChoices.length).fill(false),
-          ])
-        }}
-      >
-        Select All
-      </Button>
-      <Button
-        onClick={() => {
-          setTickedMenus(new Array(tickedMenus.length).fill(false))
-        }}
-      >
-        Unselect All
-      </Button>
+          {filterChoices.map((choice, i) => {
+            return (
+              <div key={choice}>
+                <MenuItem
+                  key={choice}
+                  onClick={() => {
+                    const newTickedMenus = [...tickedMenus]
+                    newTickedMenus[i] = !tickedMenus[i]
+                    setTickedMenus(newTickedMenus)
+                  }}
+                >
+                  <ListItemIcon>
+                    {tickedMenus[i] ? (
+                      <CheckBoxIcon color="primary" />
+                    ) : (
+                      <CheckBoxOutlineBlankIcon color="primary" />
+                    )}
+                  </ListItemIcon>
+                  {choice}
+                </MenuItem>
+              </div>
+            )
+          })}
+        </Menu>
+        <Button
+          sx={styles.toolbarButton}
+          startIcon={<SortIcon fontSize="small" sx={styles.toolbarIcon} />}
+          aria-controls="group-by-menu"
+          aria-haspopup="true"
+          onClick={(e) => {
+            setGroupByMenuAnchorEl(e.currentTarget)
+          }}
+        >
+          Group By
+        </Button>
+        <Menu
+          id="group-by-menu"
+          anchorEl={groupByMenuAnchorEl}
+          open={Boolean(groupByMenuAnchorEl)}
+          onClose={() => setGroupByMenuAnchorEl(null)}
+        >
+          <MenuItem
+            onClick={() => {
+              setGroupByMenuAnchorEl(null)
+              setGroupBy("venueType")
+            }}
+          >
+            {groupBy === "venueType" ? tickMark : hSpace}
+            {" Venue Type"}
+          </MenuItem>
+          <MenuItem
+            onClick={() => {
+              setGroupByMenuAnchorEl(null)
+              setGroupBy("year")
+            }}
+          >
+            {groupBy === "year" ? tickMark : hSpace}
+            {" Year"}
+          </MenuItem>
+        </Menu>
+        <Box sx={{ ...styles.toolbarGroup, ...styles.toolbarSpacer }}>
+          <Divider orientation="vertical" flexItem sx={styles.toolbarDivider} />
+          <Button
+            sx={styles.toolbarButton}
+            startIcon={<DoneAllIcon fontSize="small" sx={styles.toolbarIcon} />}
+            onClick={() => {
+              setTickedMenus([
+                ...Array(numVenueTypes).fill(true),
+                ...Array(additionalFilterChoices.length).fill(false),
+              ])
+            }}
+          >
+            Select All
+          </Button>
+          <Button
+            sx={styles.toolbarButton}
+            startIcon={<ClearAllIcon fontSize="small" sx={styles.toolbarIcon} />}
+            onClick={() => {
+              setTickedMenus(new Array(tickedMenus.length).fill(false))
+            }}
+          >
+            Unselect All
+          </Button>
+        </Box>
+      </Box>
       {paperInfo.length === 0 ? (
         <>
           <p>{noSearchFoundComment}</p>
