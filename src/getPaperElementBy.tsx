@@ -49,13 +49,15 @@ const getPaperItem = (paper: PaperInfo) => {
     <>
       <>{paper.isJapaneseOnly ? japaneseOnlyPrefix : null}</>
       <>
-        {urls.paper ? (
+        {urls.paper || urls.arxiv ? (
           <a
-            href={urls.paper}
+            href={urls.paper || urls.arxiv}
             target="_blank"
             style={styles.paperTitle}
             key={paper.title}
-            onClick={() => trackClick(paper.title, "paper", urls.paper as string)}
+            onClick={() =>
+              trackClick(paper.title, "paper", (urls.paper || urls.arxiv) as string)
+            }
           >
             {paper.title}
           </a>

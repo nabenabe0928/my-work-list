@@ -30,7 +30,8 @@
             "shortVideo": "Short video URL",
             "videoTranscript": "Transcript for video",
             "shortVideoTranscript": "Transcript for short video"
-        }
+        },
+        ".memo": "Any memo here. This will not be used by TypeScript."
     },
     {
         "title": "Optuna Constrained Tree-Structured Parzen Estimator Is a Joint Density Generalization of c-TPE",
@@ -151,7 +152,7 @@
         "publishedYear": 2026,
         "urls": {
             "arxiv": "https://arxiv.org/abs/2511.13625",
-            "paper": "https://ai-2-ase.github.io/",
+            "paper": "https://ai-2-ase.github.io/papers/",
             "code": "https://github.com/Kaichi-Irie/faster-batched-acqf-opt-experiments/tree/submission"
         }
     },
@@ -195,7 +196,8 @@
         "urls": {
             "arxiv": "https://arxiv.org/abs/2510.02798",
             "code": "https://hub.optuna.org/"
-        }
+        },
+        ".memo": "TODO: Update"
     },
     {
         "title": "Tree-Structured Parzen Estimator Can Solve Black-Box Combinatorial Optimization More Efficiently",
@@ -236,7 +238,7 @@
         "publishedYear": 2025,
         "urls": {
             "arxiv": "https://arxiv.org/abs/2507.02905",
-            "paper": "https://iv.csites.fct.unl.pt/de/"
+            "paper": "https://www.computer.org/csdl/proceedings-article/iv/2025/774100a007/2bggB4V8V8s"
         }
     },
     {
@@ -257,7 +259,7 @@
         "publishedMonth": 9,
         "publishedYear": 2025,
         "urls": {
-            "paper": "https://www.ped25.cz/"
+            "paper": "https://amca-admin.rachel.puxdesign.cz/PED25/media/amca/2025/dokumenty/ped25-booklet.pdf#page=176"
         }
     },
     {
@@ -332,7 +334,7 @@
         "publishedMonth": 7,
         "publishedYear": 2024,
         "urls": {
-            "paper": "https://link.springer.com/journal/42001",
+            "paper": "https://link.springer.com/article/10.1007/s42001-024-00302-6",
             "code": "https://github.com/MAS-Bench/MAS-Bench"
         }
     },
@@ -735,7 +737,7 @@
         "publishedYear": 2020,
         "isJapaneseOnly": true,
         "urls": {
-            "paper": "https://confit.atlas.jp/guide/event/jsai2020/subject/1J3-OS-10-02/detail"
+            "paper": "https://pub.confit.atlas.jp/en/event/jsai2020/presentation/1J3-OS-10-02"
         }
     },
     {
