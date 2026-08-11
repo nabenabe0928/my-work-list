@@ -115,7 +115,8 @@
         "urls": {
             "paper": "https://dl.acm.org/doi/10.1145/3770855.3817758",
             "arxiv": "https://arxiv.org/abs/2601.20800",
-            "code": "https://github.com/kAIto47802/condPED-ANOVA"
+            "code": "https://github.com/kAIto47802/condPED-ANOVA",
+            "poster": "https://github.com/kAIto47802/condPED-ANOVA/blob/main/poster.pdf"
         }
     },
     {
