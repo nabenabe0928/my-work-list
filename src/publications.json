@@ -190,15 +190,14 @@
         ],
         "venueName": "Journal of Machine Learning Research",
         "venueNameAbbreviation": "JMLR",
-        "isForthcoming": true,
         "venueType": "Journal",
         "publishedMonth": 8,
         "publishedYear": 2026,
         "urls": {
+            "paper": "https://www.jmlr.org/papers/v27/",
             "arxiv": "https://arxiv.org/abs/2510.02798",
             "code": "https://hub.optuna.org/"
-        },
-        ".memo": "TODO: Update"
+        }
     },
     {
         "title": "Tree-Structured Parzen Estimator Can Solve Black-Box Combinatorial Optimization More Efficiently",
