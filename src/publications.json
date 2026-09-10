@@ -194,7 +194,7 @@
         "publishedMonth": 8,
         "publishedYear": 2026,
         "urls": {
-            "paper": "https://www.jmlr.org/papers/v27/",
+            "paper": "https://www.jmlr.org/papers/v27/25-2424.html",
             "arxiv": "https://arxiv.org/abs/2510.02798",
             "code": "https://hub.optuna.org/"
         }
